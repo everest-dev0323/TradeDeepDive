@@ -6,6 +6,7 @@ import SettingCookieModal from './components/desktop/SettingCookieModal'
 
 import Home from './pages/Home'
 import Main from './pages/Main'
+import AboutUs from './pages/AboutUs'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<Main />} />
+          <Route path="/opt-in" element={<Main />} />
+          <Route path='/about-us' element={<AboutUs />} />
         </Routes>
         <SettingCookieModal />
         <ManageCookieModal />

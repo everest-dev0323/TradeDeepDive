@@ -7,7 +7,7 @@ const Home = () => {
   const text = window.innerWidth > 768 ? "Click To Enter" : "Click To Enter"
   return (
     <div className="bg-cover bg-top bg-no-repeat h-screen" style={{backgroundImage: `url(${url})`}}>
-      <a href="https://traderdeepdive.com/opt-in" className="duration-100 absolute w-[10vw] top-0 right-0 hover:scale-[1.05] hover:-translate-x-[5px] hover:translate-y-[5px]">
+      <Link to="/opt-in" className="duration-100 absolute w-[10vw] top-0 right-0 hover:scale-[1.05] hover:-translate-x-[5px] hover:translate-y-[5px]">
         <svg className="fill-[#fbb03b]" xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 178.8 178.81">
           <g id="Homepage">
             <g>
@@ -23,23 +23,23 @@ const Home = () => {
             </g>
           </g>
         </svg>
-      </a>
+      </Link>
       <Link to="/about-us" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
         <img src={'assets/imgs/logo.png'} className="m-auto"></img>
         <p className="text-[20px] text-[#fff] mt-5">{text}</p>
       </Link>
       <div className="flex items-center absolute bottom-[5px] left-1/2 -translate-x-1/2">
         <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://discord.gg/RgjDpBmbFw">
-            <img className="w-[2.5vw]" src="assets/svg/discord.svg" />
+            <img className="w-11" src="assets/svg/discord.svg" />
         </Link>
         <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://www.facebook.com/traderdeepdive" >
-            <img className="w-[2.5vw]" src="assets/svg/facebook.svg" />
+            <img className="w-11" src="assets/svg/facebook.svg" />
         </Link>
         <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://www.instagram.com/traderdeepdive" >
-            <img className="w-[2.5vw]" src="assets/svg/instagram.svg" />
+            <img className="w-11" src="assets/svg/instagram.svg" />
         </Link>
         <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://twitter.com/traderdeepdive">
-            <img className="w-[2.5vw]" src="assets/svg/twitter.svg" />
+            <img className="w-11" src="assets/svg/twitter.svg" />
         </Link>
       </div>
     </div>

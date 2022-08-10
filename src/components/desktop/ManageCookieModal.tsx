@@ -46,7 +46,7 @@ export default function ManageCookieModal() {
               <div className="mt-4">
                 {
                   json.map((data, index) => {
-                    return <SwitchCookie status={data.status} title={data.title} content={data.content} />
+                    return <SwitchCookie status={data.status} title={data.title} content={data.content} key={index} />
                   })
                 }
               </div>
