@@ -1,14 +1,13 @@
 import React from "react"
 import {Link} from 'react-router-dom'
 
-
 const Home = () => {
   const url = window.innerWidth > 768 ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
   const text = window.innerWidth > 768 ? "Click To Enter" : "Click To Enter"
   return (
-    <div className="bg-cover bg-top bg-no-repeat h-screen" style={{backgroundImage: `url(${url})`}}>
-      <Link to="/opt-in" className="duration-100 absolute w-[10vw] top-0 right-0 hover:scale-[1.05] hover:-translate-x-[5px] hover:translate-y-[5px]">
-        <svg className="fill-[#fbb03b]" xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 178.8 178.81">
+    <div className="flex relative flex-col bg-cover bg-top bg-no-repeat h-screen w-full" style={{backgroundImage: `url(${url})`}}>
+      <Link to="/opt-in" className="duration-100 absolute top-0 right-0">
+        <svg className="fill-[#fbb03b] w-[144px] h-[144px]" xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 178.8 178.81">
           <g id="Homepage">
             <g>
               <path className="cls-1" d="M110.81,91.77c-.34,.04-.65,.2-.92,.47s-.43,.58-.46,.91c-.04,.34,.05,.61,.26,.82,.21,.21,.49,.3,.83,.26,.34-.04,.65-.19,.91-.45,.27-.27,.43-.58,.46-.92,.04-.34-.05-.62-.26-.83-.21-.21-.49-.3-.83-.25Z"/>
@@ -24,11 +23,13 @@ const Home = () => {
           </g>
         </svg>
       </Link>
-      <Link to="/about-us" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-        <img src={'assets/imgs/logo.png'} className="m-auto"></img>
-        <p className="text-[20px] text-[#fff] mt-5">{text}</p>
-      </Link>
-      <div className="flex items-center absolute bottom-[5px] left-1/2 -translate-x-1/2">
+      <div className="h-full flex flex-col items-center justify-center">
+        <Link to="/about-us" className="flex relative bottom-0 flex-col justify-center items-center text-center h-max">
+          <img src={'assets/imgs/logo.png'} className="m-auto" />
+          <p className="text-[20px] text-[#fff] mt-5">{text}</p>
+        </Link>
+      </div>
+      <div className="flex flex-wrap items-center justify-center h-[200px] ">
         <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://discord.gg/RgjDpBmbFw">
             <img className="w-11" src="assets/svg/discord.svg" />
         </Link>
