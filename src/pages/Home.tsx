@@ -1,11 +1,18 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import {Link} from 'react-router-dom'
+import useWindowSize from "../components/common/WindowSizeHook"
+
+import MBar from "../components/mobile/MBar"
+import DBar from "../components/desktop/DBar"
 
 const Home = () => {
-  const url = window.innerWidth > 768 ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
-  const text = window.innerWidth > 768 ? "Click To Enter" : "Click To Enter"
+  const size = useWindowSize();
+  const url = size.width >= 576 ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
+  const text = size.width >= 576 ? "Click To Enter" : "PRESS TO ENTER"
+  const bar = size.width >= 576 ? <DBar/> :<MBar/>
   return (
-    <div className="flex relative flex-col bg-cover bg-top bg-no-repeat h-screen w-full" style={{backgroundImage: `url(${url})`}}>
+    <div className="flex relative flex-col w-full h-screen">
+      <div className="bg-cover bg-top bg-no-repeat h-screen w-screen fixed top-0 -z-10" style={{ backgroundImage: `url(${url})` }}></div>
       <Link to="/opt-in" className="duration-100 absolute top-0 right-0">
         <svg className="fill-[#fbb03b] w-[144px] h-[144px]" xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 178.8 178.81">
           <g id="Homepage">
@@ -25,24 +32,11 @@ const Home = () => {
       </Link>
       <div className="h-full flex flex-col items-center justify-center">
         <Link to="/about-us" className="flex relative bottom-0 flex-col justify-center items-center text-center h-max">
-          <img src={'assets/imgs/logo.png'} className="m-auto" />
-          <p className="text-[20px] text-[#fff] mt-5">{text}</p>
+          <img src={'assets/imgs/logo.png'} className="m-auto xs:w-[200px]" />
+          <p className="text-[15px] text-[#fff] mt-5 sm:text-[20px]">{text}</p>
         </Link>
       </div>
-      <div className="flex flex-wrap items-center justify-center h-[200px] ">
-        <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://discord.gg/RgjDpBmbFw">
-            <img className="w-11" src="assets/svg/discord.svg" />
-        </Link>
-        <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://www.facebook.com/traderdeepdive" >
-            <img className="w-11" src="assets/svg/facebook.svg" />
-        </Link>
-        <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://www.instagram.com/traderdeepdive" >
-            <img className="w-11" src="assets/svg/instagram.svg" />
-        </Link>
-        <Link className="block p-5 duration-100 hover:scale-[1.1]" target="_blank" to="https://twitter.com/traderdeepdive">
-            <img className="w-11" src="assets/svg/twitter.svg" />
-        </Link>
-      </div>
+      {bar}
     </div>
   )
 }

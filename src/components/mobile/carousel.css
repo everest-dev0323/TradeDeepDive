@@ -1,0 +1,41 @@
+.carousel {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.control-dots {
+  position: relative !important;
+  margin-top: 60px;
+}
+
+.control-dots .dot {
+  transition: opacity .25s ease-in;
+  opacity: 1 !important;
+  filter: alpha(opacity=30);
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 90%);
+  background: none !important;
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px !important;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 15px !important;
+  position: relative;
+  outline: none !important;
+}
+
+.control-dots .dot::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+
+.control-dots .dot.selected {
+  opacity: 1 !important;
+  background: #fff !important;
+}

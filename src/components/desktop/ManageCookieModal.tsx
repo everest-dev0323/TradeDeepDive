@@ -52,8 +52,8 @@ export default function ManageCookieModal() {
               </div>
               <Link to="/" className='block my-9 text-[#02698a]'>More information about Cookies Policy &nbsp; <span>
                 <svg className='fill-[#02698a] inline' xmlns="http://www.w3.org/2000/svg" version="1.1" width="16" height="16" viewBox="0 0 16 16">
-                  <path fill="#02698a" d="M14 16v-11l-1 1v9h-12v-12h9l1-1h-11v14z"/>
-                  <path fill="#02698a" d="M16 0h-5l1.8 1.8-6.8 6.8 1.4 1.4 6.8-6.8 1.8 1.8z"/>
+                  <path d="M14 16v-11l-1 1v9h-12v-12h9l1-1h-11v14z"/>
+                  <path d="M16 0h-5l1.8 1.8-6.8 6.8 1.4 1.4 6.8-6.8 1.8 1.8z"/>
                 </svg></span>
               </Link>
               <div className="float-right space-x-11">
