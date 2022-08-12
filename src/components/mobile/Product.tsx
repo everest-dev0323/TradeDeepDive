@@ -5,9 +5,17 @@ import useWindowSize from "../common/WindowSizeHook";
 import json from '../product.json'
 import "./product.css"
 
+interface propType {
+  content: string;
+  reference: any;
+  price: number;
+  discount: number;
+  status: boolean;
+}
+
 export default function MProduct() {
   const [selected, setSelected] = useState<number>(1)
-  const {content, reference, price, discount, status} = json[selected-1];
+  const {content, reference, price, discount, status}: propType = json[selected-1];
   return (
     <div className="h-full flex flex-col">
       <div className="flex text-top h-20 absolute w-full">
@@ -18,7 +26,7 @@ export default function MProduct() {
       <div className="flex flex-col mx-10 h-full">
         <div className="flex flex-col text-center justify-around h-full mt-28">
           <p className="font-bold text-md">{content}</p>
-          <p>{reference.map((data, index) => {
+          <p>{reference.map((data: string, index: number) => {
             return <Fragment key={index}>{data}<br/></Fragment>
           })}</p>
         </div>
