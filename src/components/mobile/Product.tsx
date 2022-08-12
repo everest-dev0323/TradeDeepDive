@@ -7,7 +7,7 @@ import "./product.css"
 
 export default function MProduct() {
   const [selected, setSelected] = useState<number>(1)
-  const {content, reference, price, discount, status} = json[1][selected-1];
+  const {content, reference, price, discount, status} = json[selected-1];
   return (
     <div className="h-full flex flex-col">
       <div className="flex text-top h-20 absolute w-full">
