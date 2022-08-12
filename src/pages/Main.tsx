@@ -14,7 +14,7 @@ export default function Main() {
       <div className="pt-8">
         <img src={logo} className="w-[20vh] m-auto sm:w-72" />
       </div>
-      <div className="text-white text-center h-full flex flex-col">
+      <div className="text-center h-full flex flex-col">
         <div className="mx-10 flex flex-col justify-evenly h-full text-center">
           <h1 className="text-2xl font-medium font-sans sm:text-6xl sm:font-[700]">Learn Market{size.width>=576?<br />:" "}Analysis Now!</h1>
           <div className="font-sans text-1xl sm:text-2xl">
@@ -28,7 +28,7 @@ export default function Main() {
           <div className="max-w-2xl m-auto mt-5 flex gap-2 flex-wrap justify-center items-center flex-col sm:flex-row sm:gap-5">
             <input type="text" className="text-black m-auto w-[270px] rounded-[10px] h-[40px] sm:rounded-[25px] sm:w-[200px] px-[20px]" placeholder="username" />
             <input type="email" className="text-black m-auto w-[270px] rounded-[10px] h-[40px] sm:rounded-[25px] sm:w-[200px] px-[20px]" placeholder="email" />
-            <button type="button" className="bg-[#993333] m-auto w-[270px] rounded-[10px] h-[40px] sm:rounded-[25px] sm:w-[200px] px-[20px] ">GET STARTED</button>
+            <button type="button" className="bg-[#993333] m-auto w-[270px] rounded-[10px] h-[40px] mt-1 sm:mt-0 sm:rounded-[25px] sm:w-[200px] px-[20px] ">GET STARTED</button>
           </div>
           <div className="flex items-center justify-center my-8 sm:my-10">
             <input type="checkbox" className="w-[30px] h-[30px]" />

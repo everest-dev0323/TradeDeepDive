@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 interface propType {
   title: string;
   content: string;
-  reference: object;
+  reference: any;
   price: number;
   discount: number;
   status: boolean;
@@ -31,7 +31,7 @@ export default function ProductItem({title, content, reference, price, discount,
             </div>
             <p className="font-medium text-lg mt-6">{content}</p>
             {
-              checked?<div className="mt-5 ">{reference.map((data, index)=> <Fragment key={index}>{data}<br/></Fragment>)}</div>:<></>
+              checked?<div className="mt-5 ">{reference.map((data: any, index: number)=> <Fragment key={index}>{data}<br/></Fragment>)}</div>:<></>
             }
           </div>
         </div>
