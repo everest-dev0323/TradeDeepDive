@@ -7,7 +7,7 @@ import "./product.css"
 
 interface propType {
   content: string;
-  reference: object;
+  reference: Array<string>;
   price: number;
   discount: number;
   status: boolean;
