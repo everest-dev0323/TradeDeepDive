@@ -1,0 +1,16 @@
+.tab {
+  display: flex;
+  flex-grow: 1;
+  height: 60px;
+  transition: 0.2s;
+}
+
+.tab span {
+  margin: auto;
+}
+
+.tab.selected{
+  height: 80px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}

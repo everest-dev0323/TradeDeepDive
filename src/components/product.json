@@ -1,11 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-import useWindowSize from "../components/common/WindowSizeHook";
-import DProduct from "../components/desktop/Product";
-import MProduct from "../components/mobile/Product";
-
-const json = [
+[[
+  {
+    "status": true,
+    "title": "Necessary cookies",
+    "content": "These cookies are used to provide users with services available through a Site and to use some of its features, such as the ability to log-in and access secure areas, provide pop-up notices, and accept language from sign-up forms. These cookes are essential for using and navigating a Site. Without them, basic functinos of our Site would not work. Because these cookies are strictly necessary to deliver our Site's essential services, you cannot refuse them."
+  },
+  {
+    "status": false,
+    "title": "Performance/Analytics cookies",
+    "content": "These cookies are used to recognize and count the number of Site visitors, gather statistics regarding how visitors move around the Site (including number of page views and the amount time spent on each page) and for conversion tracking and click hotspots. This helps us imporve the way out Site works and general user experience. For example, these cookies allow up to ensure that users are able to find what they need easily."
+  },
+  {
+    "status": false,
+    "title": "Advertising cookies",
+    "content": "These cookies are used to show advertising that is relevant to you."
+  }
+], [
   {
     "title":"Illume",
     "content": "Illume is an exclusive mentor program designed to take your investment knowledge to new heights.",
@@ -27,22 +36,5 @@ const json = [
     "price": 242,
     "discount": 10,
     "status": false
-  },
-]
-
-export default function Product() {
-  const size = useWindowSize()
-  const status = size.width >= 576?true:false
-  const url = status ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
-  return (
-    <div className="flex flex-col h-screen w-full">
-      <div className="bg-cover bg-top bg-no-repeat h-screen w-screen fixed -z-10" style={{backgroundImage: `url(${url})`}}></div>
-      {status&&<div className="flex px-16 pt-10">
-        <Link to="/" className="cursor-pointer">
-          <img src="./assets/svg/logo.svg" className="w-72" />
-        </Link>
-      </div>}
-      {status?<DProduct/>:<MProduct/>}
-    </div>
-  )
-}
+  }
+]]

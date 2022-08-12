@@ -11,7 +11,7 @@
   transition: opacity .25s ease-in;
   opacity: 1 !important;
   filter: alpha(opacity=30);
-  box-shadow: 1px 1px 2px rgb(0 0 0 / 90%);
+  box-shadow: none !important;
   background: none !important;
   border-radius: 50%;
   width: 10px !important;

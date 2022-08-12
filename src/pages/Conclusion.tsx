@@ -7,7 +7,8 @@ export default function Conclusion() {
   const size = useWindowSize();
   const url = size.width >= 576 ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
   return (
-    <div className="flex flex-col bg-cover bg-top bg-no-repeat h-screen" style={{ backgroundImage: `url(${url})` }}>
+    <div className="flex flex-col h-full">
+      <div className="bg-cover bg-top bg-no-repeat h-screen fixed -z-10" style={{ backgroundImage: `url(${url})` }}></div>
       <div className="flex flex-col w-full h-full items-center justify-around">
         <div className="text-white text-center mt-[150px]">
           <h1 className="text-5xl font-bold">WELCOME!</h1>
