@@ -21,8 +21,8 @@ function App() {
           <Route path='/products' element={<Product />} />
           <Route path='/conclusion' element={<Conclusion />} />
         </Routes>
-        {/* <SettingCookieModal /> */}
-        {/* <ManageCookieModal /> */}
+        <SettingCookieModal />
+        <ManageCookieModal />
       </BrowserRouter>
     </>
   )
