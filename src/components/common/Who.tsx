@@ -1,17 +1,19 @@
 import React from "react";
 import useWindowSize from "./WindowSizeHook";
+import { Link } from "react-router-dom";
 
 export default function Who() {
   const size = useWindowSize();
   return (
-    <div className="flex h-full items-center justify-evenly xs:flex-col-reverse xs:mx-28 sm:mx-16">
-      <div className="text-white font-sans max-w-xl">
-        <h3 className="font-bold text-4xl xs:hidden">Who are we?</h3>
-        <p className="text-xl xs:text-center">This is a bespoke trading community designed around you, helping both new and experienced traders to find their feet in the turbulent world of investing, through analysing economic data and market moving news in a fun and engaging way!</p>
+    <div className="flex h-full items-center sm:justify-evenly flex-col mx-16 gap-5 sm:flex-row">
+      <div className="text-white font-sans max-w-xl order-3 sm:order-2">
+        <h3 className="font-bold text-4xl hidden sm:block">Who are we?</h3>
+        <p className="text-xl text-center sm:text-start">This is a bespoke trading community designed around you, helping both new and experienced traders to find their feet in the turbulent world of investing, through analysing economic data and market moving news in a fun and engaging way!</p>
       </div>
-      <div className="duration-100 hover:scale-[1.1] cursor-pointer">
-        <img className="min-w-[100px] min-h-[100px]" src="./assets/svg/play.svg" alt="" />
-      </div>
+      <img className="duration-100 hover:scale-[1.1] cursor-pointer h-[80px] sm:w-[100px] sm:h-[100px] order-2 sm:order-3" src="./assets/svg/play.svg" alt="" />
+      {size.width<576 && <div className="flex justify-center mb-10">
+          <Link to='/products' className="rounded-xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none xs:tracking-[3px] order-1">SUBSCRIBE</Link>
+        </div>}
     </div>
   )
 }

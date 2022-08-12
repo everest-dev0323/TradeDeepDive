@@ -6,10 +6,13 @@ import MBar from "../components/mobile/MBar"
 import DBar from "../components/desktop/DBar"
 
 const Home = () => {
-  const size = useWindowSize();
-  const url = size.width >= 576 ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
-  const text = size.width >= 576 ? "Click To Enter" : "PRESS TO ENTER"
-  const bar = size.width >= 576 ? <DBar/> :<MBar/>
+  const size: any = useWindowSize();
+  const status: boolean = size.width >= 576?true:false
+  const url: string = status ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
+  const text: string = status ? "Click To Enter" : "PRESS TO ENTER"
+  const bar: any = status ? <DBar/> :<MBar/>
+
+  const scale: number = size.width/575.0
   return (
     <div className="flex relative flex-col w-full h-screen">
       <div className="bg-cover bg-top bg-no-repeat h-screen w-screen fixed top-0 -z-10" style={{ backgroundImage: `url(${url})` }}></div>
@@ -32,7 +35,7 @@ const Home = () => {
       </Link>
       <div className="h-full flex flex-col items-center justify-center">
         <Link to="/about-us" className="flex relative bottom-0 flex-col justify-center items-center text-center h-max">
-          <img src={'assets/imgs/logo.png'} className="m-auto xs:w-[200px]" />
+          <img src={'assets/imgs/logo.png'} className="m-auto w-[200px] sm:w-max" />
           <p className="text-[15px] text-[#fff] mt-5 sm:text-[20px]">{text}</p>
         </Link>
       </div>
