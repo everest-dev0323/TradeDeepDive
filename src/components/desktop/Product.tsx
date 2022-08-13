@@ -8,7 +8,7 @@ export default function DProduct() {
     <div className="flex h-full mx-20">
       <div className="flex justify-evenly w-screen h-full gap-10 items-center flex-wrap">
         {json.map((data, index) => {
-          return <ProductItem title={data.title} content={data.content} reference={data.reference} price={data.price} discount={data.discount} status={data.status} key={index}/>
+          return <ProductItem title={data.title} content={data.content} reference={data.reference} price={data.price} discount={data.discount} status={data.status} color={data.color} key={index}/>
         })}
       </div>
     </div>

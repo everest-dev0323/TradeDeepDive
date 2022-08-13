@@ -17,7 +17,7 @@ export default function Conclusion() {
         <div className="flex flex-col w-full h-full items-center justify-center mx-10">
           <div className="text-white text-center">
             <h1 className="text-5xl font-bold">WELCOME!</h1>
-            <p className="text-lg mt-10">WHATS NEXT?</p>
+            <p className="text-lg mt-10">WHAT'S NEXT?</p>
           </div>
           <div className="flex flex-wrap justify-evenly w-full gap-5">
             <div className="max-w-xs sm:text-center gap-5 sm:gap-0 text-white space-y-[10px] sm:space-y-4 flex sm:block">

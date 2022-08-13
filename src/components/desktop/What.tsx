@@ -18,12 +18,12 @@ export default function What() {
         </div>
       </div>
       <div className="text-white text-center">
-        <h2 className="font-bold text-3xl mb-5">Besh2oke Training</h2>
+        <h2 className="font-bold text-3xl mb-5">Bespoke Training</h2>
         <p>Understand how analyse macro and micro economic data.<br/>
           Discover the power of understanding investor psyhcology.<br/>
           Learn to predict market moves hours before they happen.</p>
       </div>
-      <div className="flex w-full justify-around lg:mt-0 xl:-mt-20">
+      <div className="flex w-full justify-around lg:mt-0">
 				<div className="text-white text-center">
 					<h2 className="font-bold text-3xl mb-5">Market Insights</h2>
 					<p>Check out the daily market analysis to keep<br/>
