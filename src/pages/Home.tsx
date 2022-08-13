@@ -10,7 +10,7 @@ const Home = () => {
   const status: boolean = size.width >= 576?true:false
   const url: string = status ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
   const text: string = status ? "Click To Enter" : "PRESS TO ENTER"
-  const bar: any = status ? <DBar/> :<MBar/>
+  const bar: any = status ? <DBar/> :<MBar onClick={()=>{}}/>
 
   const scale: number = size.width/575.0
   return (
