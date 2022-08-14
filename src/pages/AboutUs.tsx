@@ -46,34 +46,34 @@ export default function AboutUs() {
             <div className="flex items-center">
               {showSocial && (
                 <div className="items-center space-x-5 sm:flex">
-                  <Link
+                  <a
                     className="block duration-100 hover:scale-[1.1]"
                     target="_blank"
-                    to="https://discord.gg/RgjDpBmbFw"
+                    href="https://discord.gg/RgjDpBmbFw"
                   >
                     <img className="w-9" src="assets/svg/discord.svg" />
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="block duration-100 hover:scale-[1.1]"
                     target="_blank"
-                    to="https://www.facebook.com/traderdeepdive"
+                    href="https://www.facebook.com/traderdeepdive"
                   >
                     <img className="w-9" src="assets/svg/facebook.svg" />
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="block duration-100 hover:scale-[1.1]"
                     target="_blank"
-                    to="https://www.instagram.com/traderdeepdive"
+                    href="https://www.instagram.com/traderdeepdive"
                   >
                     <img className="w-9" src="assets/svg/instagram.svg" />
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="block duration-100 hover:scale-[1.1]"
                     target="_blank"
-                    to="https://twitter.com/traderdeepdive"
+                    href="https://twitter.com/traderdeepdive"
                   >
                     <img className="w-9" src="assets/svg/twitter.svg" />
-                  </Link>
+                  </a>
                 </div>
               )}
               <button
@@ -122,7 +122,7 @@ export default function AboutUs() {
             className={`${
               selected == 1
                 ? "opacity-100"
-                : "opacity-30 scale-[0.9] hover:sm:scale-[0.9] hover:opacity-100"
+                : "opacity-30 scale-[0.9] sm:scale-100 hover:sm:scale-[0.9] hover:opacity-100"
             } text-white relative duration-500 cursor-pointer`}
           >
             <img
@@ -143,7 +143,7 @@ export default function AboutUs() {
             className={`${
               selected == 2
                 ? "opacity-100"
-                : "opacity-30 scale-[0.9] hover:sm:scale-[0.9] hover:opacity-100"
+                : "opacity-30 scale-[0.9] sm:scale-100 hover:sm:scale-[0.9] hover:opacity-100"
             } text-white relative duration-500 cursor-pointer`}
           >
             <img
@@ -164,7 +164,7 @@ export default function AboutUs() {
             className={`${
               selected == 3
                 ? "opacity-100"
-                : "opacity-30 scale-[0.9] hover:sm:scale-[0.9] hover:opacity-100"
+                : "opacity-30 scale-[0.9] sm:scale-100 hover:sm:scale-[0.9] hover:opacity-100"
             } text-white relative duration-500 cursor-pointer`}
           >
             <img

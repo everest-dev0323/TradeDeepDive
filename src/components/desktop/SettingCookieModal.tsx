@@ -31,7 +31,7 @@ const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-[#02344a] p-6 text-left align-middle shadow-xl transition-all">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-[#02344a] p-6 text-left align-middle shadow-xl transition-all w-[90%] sm:max-w-lg md:max-w-4xl">
               <h3 className="text-lg font-medium leading-6 text-white">
                 This Websit uses Cookies
               </h3>
@@ -43,7 +43,7 @@ const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
                 </p>
               </div>
 
-              <div className="mt-4 float-right space-x-11">
+              <div className="mt-4 float-right space-x-5 sm:space-x-11">
                 <button
                   type="button"
                   className="inline-flex justify-center rounded-md bg-none px-4 py-2 text-sm font-medium text-[#259ae9] w-[170px] focus:outline-none"
@@ -53,7 +53,7 @@ const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
                 </button>
                 <button
                   type="button"
-                  className="inline-flex justify-center rounded-md bg-none px-4 py-2 text-sm font-medium w-[170px] bg-[#2aa8ff] text-white focus:outline-none"
+                  className="inline-flex justify-center rounded-md bg-none px-4 py-2 text-sm font-medium w-[100px] sm:w-[170px] bg-[#2aa8ff] text-white focus:outline-none"
                 >
                   Accept all
                 </button>

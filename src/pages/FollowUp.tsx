@@ -9,7 +9,7 @@ export default function FollowUp() {
   const size: any = useWindowSize();
   const status: boolean = size.width>=576? true: false
   const url: string = status ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
-  const bar: any = status ? <DBar/> :<MBar onClick={() => {}}/>
+  const bar: any = status ? <DBar/> :<MBar/>
   return (
     <div className="flex flex-col h-screen">
       <div className="bg-cover bg-top bg-no-repeat w-screen h-screen fixed -z-10" style={{ backgroundImage: `url(${url})` }}></div>
