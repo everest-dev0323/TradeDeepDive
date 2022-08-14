@@ -66,16 +66,16 @@ export default function CookiePolicy() {
         <p className="mb-5">
           You can find out more about cookies (including how to see or manage
           them) at{" "}
-          <Link className="text-[#2aa8ff]" to="/cookies">
+          <a className="text-[#2aa8ff]" href="https://allaboutcookies.org/">
             All About Cookies
-          </Link>{" "}
+          </a>{" "}
           or{" "}
           <a className="text-[#2aa8ff]" href="https://www.aboutcookies.org/">
             AboutCookies.org
           </a>{" "}
           websites.
         </p>
-        <br/>
+        <br />
         <h3 className="font-bold text-lg mb-3">How do we use cookies?</h3>
         <p className="mb-5">
           The following sets out how we use different categories of cookies, as
