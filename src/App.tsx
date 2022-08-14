@@ -1,8 +1,8 @@
-import { lazy, Suspense, useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { lazy, Suspense, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import ManageCookieModal from './components/desktop/ManageCookieModal'
-import SettingCookieModal from './components/desktop/SettingCookieModal'
+import ManageCookieModal from "./components/desktop/ManageCookieModal";
+import SettingCookieModal from "./components/desktop/SettingCookieModal";
 
 import Home from './pages/Home'
 import Main from './pages/Main'
@@ -13,6 +13,12 @@ import CookiePolicy from './pages/CookiePolicy'
 import Rule from './pages/Rule'
 
 function App() {
+  const [showManageModal, setShowManageModal] = useState(false);
+
+  const openManageModal = (closed: boolean) => {
+    setShowManageModal(closed);
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -25,11 +31,14 @@ function App() {
           <Route path='/cookie-policy' element={<CookiePolicy />} />
           <Route path='/rule' element={<Rule />} />
         </Routes>
-        <SettingCookieModal />
-        <ManageCookieModal />
+        <SettingCookieModal
+          opened={true}
+          openManageModal={(closed: boolean) => openManageModal(closed)}
+        />
+        <ManageCookieModal opened={showManageModal} />
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

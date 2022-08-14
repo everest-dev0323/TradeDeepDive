@@ -37,7 +37,7 @@ export default function Product() {
   return (
     <div className="flex flex-col h-screen w-full">
       <div className="bg-cover bg-top bg-no-repeat h-screen w-screen fixed -z-10" style={{backgroundImage: `url(${url})`}}></div>
-      {status&&<div className="flex px-16 pt-10">
+      {status&&<div className="flex mx-16 my-10">
         <Link to="/" className="cursor-pointer">
           <img src="./assets/svg/logo.svg" className="w-72" />
         </Link>

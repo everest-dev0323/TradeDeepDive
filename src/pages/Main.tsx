@@ -11,8 +11,10 @@ export default function Main() {
   return (
     <div className="flex flex-col h-screen">
       <div className="fixed bg-cover bg-top bg-no-repeat h-screen w-screen -z-10" style={{ backgroundImage: `url(${url})` }}></div>
-      <div className="pt-8 flex justify-center">
-        <Link to="/" className="block"><img src={logo} className="w-[20vh] sm:w-72" /></Link>
+      <div className="my-10">
+        <Link to="/" className="cursor-pointer">
+          <img src={logo} className="w-[20vh] m-auto sm:w-72" />
+        </Link>
       </div>
       <div className="text-center h-full flex flex-col">
         <div className="mx-10 flex flex-col justify-evenly h-full text-center">

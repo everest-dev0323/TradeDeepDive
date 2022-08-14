@@ -10,7 +10,7 @@ const Home = () => {
   const status: boolean = size.width >= 576?true:false
   const url: string = status ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
   const text: string = status ? "Click To Enter" : "PRESS TO ENTER"
-  const bar: any = status ? <DBar/> :<MBar/>
+  const bar: any = status ? <DBar/> :<MBar onClick={()=>{}}/>
 
   const scale: number = size.width/575.0
   return (
@@ -36,7 +36,7 @@ const Home = () => {
       <div className="h-full flex flex-col items-center justify-center">
         <Link to="/about-us" className="flex relative bottom-0 flex-col justify-center items-center text-center h-max">
           <img src={'assets/imgs/logo.png'} className="m-auto w-[200px] sm:w-max" />
-          <p className="text-[15px] text-[#fff] mt-5 sm:text-[20px]">{text}</p>
+          <p className="text-[15px] text-[#fff] mt-5 sm:text-[32px]">{text}</p>
         </Link>
       </div>
       {bar}

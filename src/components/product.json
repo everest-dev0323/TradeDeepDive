@@ -1,24 +1,59 @@
 [
   {
-    "title":"Illume",
-    "content": "Illume is an exclusive mentor program designed to take your investment knowledge to new heights.",
-    "reference": ["Limited Availability","Personal Mentoring","Daily Abrnalyis","Live Trading Room","Market Insights","Investor Psychology","Community Discord","Access To In-House Resources","Dedicated Support Team"],
-    "price": 900,
-    "discount": 10,
-    "status": true
-  },{
-    "title":"Insight",
+    "title": "Insight",
     "content": "Insight offers you daily views on the events that are shaping companies, industries and markets around the world.",
-    "reference": ["Limited Availability","Personal Mentoring","Daily Abrnalyis","Live Trading Room","Market Insights","Investor Psychology","Community Discord","Access To In-House Resources","Dedicated Support Team"],
+    "reference": [
+      "Limited Availability",
+      "Personal Mentoring",
+      "Daily Abrnalyis",
+      "Live Trading Room",
+      "Market Insights",
+      "Investor Psychology",
+      "Community Discord",
+      "Access To In-House Resources",
+      "Dedicated Support Team"
+    ],
     "price": 500,
     "discount": 10,
-    "status": true
-  },{
-    "title":"Pursue",
+    "status": true,
+    "color": "#33997d"
+  },
+  {
+    "title": "Illume",
+    "content": "Illume is an exclusive mentor program designed to take your investment knowledge to new heights.",
+    "reference": [
+      "Limited Availability",
+      "Personal Mentoring",
+      "Daily Abrnalyis",
+      "Live Trading Room",
+      "Market Insights",
+      "Investor Psychology",
+      "Community Discord",
+      "Access To In-House Resources",
+      "Dedicated Support Team"
+    ],
+    "price": 900,
+    "discount": 10,
+    "status": true,
+    "color": "#6a3399"
+  },
+  {
+    "title": "Pursue",
     "content": "The Pursue pathway is an end to end video course like no other, giving you the tools you need to launch your trading career.",
-    "reference": ["Limited Availability","Personal Mentoring","Daily Abrnalyis","Live Trading Room","Market Insights","Investor Psychology","Community Discord","Access To In-House Resources","Dedicated Support Team"],
+    "reference": [
+      "Limited Availability",
+      "Personal Mentoring",
+      "Daily Abrnalyis",
+      "Live Trading Room",
+      "Market Insights",
+      "Investor Psychology",
+      "Community Discord",
+      "Access To In-House Resources",
+      "Dedicated Support Team"
+    ],
     "price": 242,
     "discount": 10,
-    "status": false
+    "status": false,
+    "color": "#993376"
   }
 ]

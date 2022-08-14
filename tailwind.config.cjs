@@ -12,6 +12,11 @@ module.exports = {
         xl: "1200px",
         '2xl': "1400px"
       },
+      colors: {
+        ingisght: "#33997d",
+        illume: "#6a3399",
+        pursure: "#993376"
+      }
     },
   },
   plugins: [],
