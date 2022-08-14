@@ -8,7 +8,6 @@ import Who from "../components/common/Who";
 import What from "../components/desktop/What";
 import Why from "../components/common/Why";
 import MBar from "../components/mobile/MBar";
-
 import CustomSlider from "../components/mobile/CustomSlider";
 
 export default function AboutUs() {
@@ -52,21 +51,21 @@ export default function AboutUs() {
       </div>:<MBar/>}
       <div className="flex flex-col h-full">
         {selected==1?<Who/>:(selected==2?(size.width>=576?<What />:<CustomSlider/>):<Why />)}
-        <div className="flex justify-evenly mb-5 sm:mb-16 md:mb-24">
-          <div onClick={() => setSelected(1)} className={`${selected==1? "opacity-100": "opacity-30 scale-[0.9] hover:sm:scale-[0.9] hover:opacity-100"} text-white relative duration-500 cursor-pointer`}>
+        <div className="flex justify-evenly mb-5 sm:mb-12 md:mb-16">
+          <div onClick={() => setSelected(1)} className={`${selected==1? "opacity-100": "opacity-30 scale-[0.9] sm:scale-100 sm:hover:scale-[0.9] hover:opacity-100"} text-white relative duration-500 cursor-pointer`}>
             <img src="./assets/svg/who.svg" className="m-auto w-6 h-6 sm:w-8 sm:h-8" />
             <p className="text-3xl sm:text-5xl">WHO</p>
-            {status && <span className={`bg-[#ff0000] absolute -left-[25px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${selected==1? "opacity-100":"opacity-0"}`}></span>}
+            {status && <span className={`bg-[#993333] absolute -left-[25px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${selected==1? "opacity-100":"opacity-0"}`}></span>}
           </div>
-          <div onClick={() => setSelected(2)} className={`${selected==2? "opacity-100": "opacity-30 scale-[0.9] hover:sm:scale-[0.9] hover:opacity-100"} text-white relative duration-500 cursor-pointer`}>
+          <div onClick={() => setSelected(2)} className={`${selected==2? "opacity-100": "opacity-30 scale-[0.9] sm:scale-100 sm:hover:scale-[0.9] hover:opacity-100"} text-white relative duration-500 cursor-pointer`}>
             <img src="./assets/svg/what.svg" className="m-auto w-6 h-6 sm:w-8 sm:h-8" />
             <p className="text-3xl sm:text-5xl">WHAT</p>
-            {status && <span className={`bg-[#ff0000] absolute -left-[10px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${selected==2? "opacity-100":"opacity-0"}`}></span>}
+            {status && <span className={`bg-[#993333] absolute -left-[10px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${selected==2? "opacity-100":"opacity-0"}`}></span>}
           </div>
-          <div onClick={() => setSelected(3)} className={`${selected==3? "opacity-100": "opacity-30 scale-[0.9] hover:sm:scale-[0.9] hover:opacity-100"} text-white relative duration-500 cursor-pointer`}>
+          <div onClick={() => setSelected(3)} className={`${selected==3? "opacity-100": "opacity-30 scale-[0.9] sm:scale-100 sm:hover:scale-[0.9] hover:opacity-100"} text-white relative duration-500 cursor-pointer`}>
             <img src="./assets/svg/why.svg" className="m-auto w-6 h-6 sm:w-8 sm:h-8" />
             <p className="text-3xl sm:text-5xl">WHY</p>
-            {status && <span className={`bg-[#ff0000] absolute -left-[25px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${selected==3? "opacity-100":"opacity-0"}`}></span>}
+            {status && <span className={`bg-[#993333] absolute -left-[25px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${selected==3? "opacity-100":"opacity-0"}`}></span>}
           </div>
         </div>
       </div>

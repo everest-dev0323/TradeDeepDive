@@ -11,8 +11,8 @@ export default function Main() {
   return (
     <div className="flex flex-col h-screen">
       <div className="fixed bg-cover bg-top bg-no-repeat h-screen w-screen -z-10" style={{ backgroundImage: `url(${url})` }}></div>
-      <div className="pt-8">
-        <img src={logo} className="w-[20vh] m-auto sm:w-72" />
+      <div className="pt-8 flex justify-center">
+        <Link to="/" className="block"><img src={logo} className="w-[20vh] sm:w-72" /></Link>
       </div>
       <div className="text-center h-full flex flex-col">
         <div className="mx-10 flex flex-col justify-evenly h-full text-center">
@@ -33,8 +33,8 @@ export default function Main() {
           <div className="flex items-center justify-center my-8 sm:my-10">
             <input type="checkbox" className="w-[30px] h-[30px]" />
             <p className="leading-[15px] ml-3">
-              <span>I have read and agree to the Terms of Use as well as<br/></span>
-              <span className="float-left"><span className="text-[#2284c5]">Privacy</span> and <span className="text-[#2284c5]">Cookies Policy</span></span>
+              <span>I have read and agree to the <Link to="/terms-of-use" className="text-[#2aa8ff]">Terms of Use</Link> as well as<br/></span>
+              <span className="float-left"><Link to="/privacy-policy" className="text-[#2aa8ff]">Privacy</Link> and <Link to="/cookie-policy" className="text-[#2aa8ff]">Cookies Policy</Link></span>
             </p>
           </div>
         </div>

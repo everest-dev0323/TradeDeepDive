@@ -8,7 +8,9 @@ import Home from './pages/Home'
 import Main from './pages/Main'
 import AboutUs from './pages/AboutUs'
 import Product from './pages/Product'
-import Conclusion from './pages/Conclusion'
+import FollowUp from './pages/FollowUp'
+import CookiePolicy from './pages/CookiePolicy'
+import Rule from './pages/Rule'
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
           <Route path="/opt-in" element={<Main />} />
           <Route path='/about-us' element={<AboutUs />} />
           <Route path='/products' element={<Product />} />
-          <Route path='/conclusion' element={<Conclusion />} />
+          <Route path='/follow-up' element={<FollowUp />} />
+          <Route path='/cookie-policy' element={<CookiePolicy />} />
+          <Route path='/rule' element={<Rule />} />
         </Routes>
         <SettingCookieModal />
         <ManageCookieModal />

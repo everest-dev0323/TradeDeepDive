@@ -5,9 +5,9 @@ import useWindowSize from "../components/common/WindowSizeHook";
 import DBar from "../components/desktop/DBar"
 import MBar from "../components/mobile/MBar"
 
-export default function Conclusion() {
+export default function FollowUp() {
   const size: any = useWindowSize();
-  const status: boolean = size.width>=576
+  const status: boolean = size.width>=576? true: false
   const url: string = status ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
   const bar: any = status ? <DBar/> :<MBar/>
   return (
@@ -17,10 +17,10 @@ export default function Conclusion() {
         <div className="flex flex-col w-full h-full items-center justify-center mx-10">
           <div className="text-white text-center">
             <h1 className="text-5xl font-bold">WELCOME!</h1>
-            <p className="text-lg mt-10">WHATS NEXT?</p>
+            <p className="text-lg mt-10">WHAT'S NEXT?</p>
           </div>
           <div className="flex flex-wrap justify-evenly w-full gap-5">
-            <div className="max-w-xs sm:text-center gap-5 sm:gap-0 text-white space-y-[10px] sm:space-y-4 flex sm:block">
+            <div className="w-xs sm:text-center gap-5 sm:gap-0 text-white space-y-[10px] sm:space-y-4 flex sm:block">
               <h1 className="text-[#026ca7] w-12 font-extrabold text-7xl sm:w-auto">1</h1>
               <div className="flex justify-between w-full sm:block sm:space-y-4">
                 <div className="space-y-[10px] sm:space-y-4">
@@ -37,7 +37,7 @@ export default function Conclusion() {
             </div>
             <div className="max-w-xs sm:text-center gap-5 sm:gap-0 text-white self-end space-y-[10px] sm:space-y-4 flex sm:block">
               <h1 className="text-[#026ca7] font-extrabold text-7xl">2</h1>
-              <p>Reach out to either a <span className="text-[#ff6e6a] font-medium text-lg">Mentor</span> or a <span className="text-[#fbb03b] font-medium text-lg">Mod</span> on the
+              <p>Reach out to either a <span className="text-[#ff6e6a] font-bold text-lg">Mentor</span> or a <span className="text-[#fbb03b] font-bold text-lg">Mod</span> on the
               discord server and we will asign you the relievent
               permissions to access everything you need!</p>
             </div>

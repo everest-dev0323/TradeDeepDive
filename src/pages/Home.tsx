@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <div className="flex relative flex-col w-full h-screen">
       <div className="bg-cover bg-top bg-no-repeat h-screen w-screen fixed top-0 -z-10" style={{ backgroundImage: `url(${url})` }}></div>
-      <Link to="/opt-in" className="duration-100 absolute top-0 right-0">
-        <svg className="fill-[#fbb03b] w-[144px] h-[144px]" xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 178.8 178.81">
+      <Link to="/opt-in" className="duration-100 absolute top-0 right-0 hover:sm:scale-105 hover:sm:-translate-x-1 hover:sm:translate-y-1">
+        <svg className="fill-[#fbb03b] w-36 h-36 sm:w-52 sm:h-52 md:w-60 md:h-60" xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 178.8 178.81">
           <g id="Homepage">
             <g>
               <path className="cls-1" d="M110.81,91.77c-.34,.04-.65,.2-.92,.47s-.43,.58-.46,.91c-.04,.34,.05,.61,.26,.82,.21,.21,.49,.3,.83,.26,.34-.04,.65-.19,.91-.45,.27-.27,.43-.58,.46-.92,.04-.34-.05-.62-.26-.83-.21-.21-.49-.3-.83-.25Z"/>

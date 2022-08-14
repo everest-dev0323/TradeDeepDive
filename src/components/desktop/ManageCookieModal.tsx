@@ -7,7 +7,7 @@ import json from '../content.json'
 import SwitchCookie from './SwitchCookie'
 
 export default function ManageCookieModal() {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState<boolean>(true)
 
   function closeModal() {
     setIsOpen(false)
