@@ -20,11 +20,7 @@ export default function AboutUs() {
     ? "assets/imgs/desktop/home_bg.jpg"
     : "assets/imgs/mobile/mb_home_bg.jpg";
   const logo = status ? "assets/svg/logo.svg" : "assets/imgs/logo.png";
-  // useEffect(() => {
-  //   // window.addEventListener('click', () => {
-  //   //   alert(23);
-  //   // })
-  // }, []);
+
 
   function openSocial() {
     setShowSocial(true);
@@ -38,7 +34,7 @@ export default function AboutUs() {
       ></div>
 
       {!shareSelected ? (
-        <div className="flex justify-between items-center mx-5 h-[25vw] sm:mx-16 sm:my-10 sm:h-auto">
+        <div className="flex justify-between items-center mx-5 h-[25vw] sm:mx-16 sm:my-10 sm:h-[100px]">
           <Link to="/" className="cursor-pointer">
             <img src={logo} className="w-1/6 sm:w-72" />
           </Link>

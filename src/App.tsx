@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import ManageCookieModal from "./components/desktop/ManageCookieModal";
