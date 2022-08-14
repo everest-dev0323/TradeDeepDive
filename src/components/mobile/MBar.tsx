@@ -10,9 +10,9 @@ export default function MBar({ onClick }: PropsType) {
     <>
       <div
         onClick={() => onClick(false)}
-        className="fixed top-0 left-0 w-screen h-screen"
+        className="fixed top-0 left-0 w-screen h-screen "
       ></div>
-      <div className="justify-center flex h-[25vw] z-10">
+      <div className="justify-center flex h-[25vw]">
         <Link
           className="bg-[#02344a] flex grow duration-100"
           target="_blank"

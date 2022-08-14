@@ -34,7 +34,7 @@ const ManageCookieModal: React.FC<Props> = ({ opened }) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="absolute top-0 right-0 w-[550px] bg-[#02344a] py-6 px-10 text-left align-middle shadow-xl transition-all">
+            <div className="absolute top-0 sm:right-0 mx-4 sm:m-auto sm:w-[550px] bg-[#02344a] py-6 px-10 text-left align-middle shadow-xl transition-all">
               <div className="relative">
                 <h3 className="text-lg font-medium leading-6 text-white">
                   Manage your privacy preferences
