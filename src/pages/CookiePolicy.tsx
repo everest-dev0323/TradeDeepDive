@@ -58,7 +58,7 @@ export default function CookiePolicy() {
           interface customization, security, research and analysis to improve
           the functionality of our Site, and advertising (for more information
           on how we use your data, please read our{" "}
-          <Link to="/privacy-policy" className="te#2aa8ff]xt-[">
+          <Link to="/privacy-policy" className="text-[#2aa8ff]">
             Privacy Policy
           </Link>
           ).
@@ -70,9 +70,9 @@ export default function CookiePolicy() {
             All About Cookies
           </Link>{" "}
           or{" "}
-          <Link className="text-[#2aa8ff]" to="https://aboutcookies.org">
+          <a className="text-[#2aa8ff]" href="https://www.aboutcookies.org/">
             AboutCookies.org
-          </Link>{" "}
+          </a>{" "}
           websites.
         </p>
         <br/>
