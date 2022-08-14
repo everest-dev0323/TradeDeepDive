@@ -68,7 +68,7 @@ const ManageCookieModal: React.FC<Props> = ({ opened }) => {
                     );
                   })}
                 </div>
-                <Link to="/" className="block my-9 text-[#02698a]">
+                <Link to="/cookie-policy" className="block my-9 text-[#02698a]">
                   More information about Cookies Policy &nbsp;{" "}
                   <span>
                     <svg

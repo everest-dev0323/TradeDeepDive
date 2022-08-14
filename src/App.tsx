@@ -10,7 +10,9 @@ import AboutUs from './pages/AboutUs'
 import Product from './pages/Product'
 import FollowUp from './pages/FollowUp'
 import CookiePolicy from './pages/CookiePolicy'
-import Rule from './pages/Rule'
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermofUse"
+import HouseRules from './pages/HouseRules'
 
 function App() {
   const [showManageModal, setShowManageModal] = useState(false);
@@ -29,7 +31,9 @@ function App() {
           <Route path='/products' element={<Product />} />
           <Route path='/follow-up' element={<FollowUp />} />
           <Route path='/cookie-policy' element={<CookiePolicy />} />
-          <Route path='/rule' element={<Rule />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/terms-of-use' element={<TermsOfUse />} />
+          <Route path='/houserules' element={<HouseRules />} />
         </Routes>
         <SettingCookieModal
           opened={true}

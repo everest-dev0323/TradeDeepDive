@@ -1,8 +1,9 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 type Props = {
-  opened: boolean;
+  opened: boolean
   openManageModal: Function;
 };
 
@@ -39,7 +40,9 @@ const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
                 <p className="text-sm text-white">
                   We use cookes to ensure you get the best experience on our
                   website. To learn more about cookies please read our{" "}
-                  <span className="text-[#269eef]">Cookies Policy</span>.
+                  <Link to="/cookie-policy">
+                    <span className="text-[#269eef]">Cookies Policy</span>.
+                  </Link>
                 </p>
               </div>
 
