@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link, Route, Router } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import { useCookies } from 'react-cookie';
 
 import json from "../content.json";
 import SwitchCookie from "./SwitchCookie";
@@ -12,6 +13,14 @@ type Props = {
 
 const ManageCookieModal: React.FC<Props> = ({ opened }) => {
   let [isOpen, setIsOpen] = useState(true);
+  const [cookies, setCookie] = useCookies(['policy']);
+  const [cookieStatus, setCookieStatus] = useState([true, true, true]);
+
+  const setCookies = (index: number, status: boolean)=> {
+    const array = [...cookieStatus]
+    array[index] = status;
+    setCookieStatus(array);
+  }
 
   function closeModal() {
     setIsOpen(false);
@@ -34,7 +43,7 @@ const ManageCookieModal: React.FC<Props> = ({ opened }) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="absolute top-0 sm:right-0 mx-4 sm:m-auto sm:w-[550px] bg-[#02344a] py-6 px-10 text-left align-middle shadow-xl transition-all">
+            <div className="absolute top-0 sm:right-0 mx-4 sm:m-auto sm:w-[550px] bg-[#02344a] py-6 px-10 text-left align-middle shadow-xl transition-all z-[1]">
               <div className="relative">
                 <h3 className="text-lg font-medium leading-6 text-white">
                   Manage your privacy preferences
@@ -63,12 +72,14 @@ const ManageCookieModal: React.FC<Props> = ({ opened }) => {
                         status={data.status}
                         title={data.title}
                         content={data.content}
+                        index={index}
                         key={index}
+                        cookie={setCookies}
                       />
                     );
                   })}
                 </div>
-                <Link to="/cookie-policy" className="block my-9 text-[#02698a]">
+                <a target={"_blank"} href="/cookie-policy" className="block my-9 text-[#02698a]">
                   More information about Cookies Policy &nbsp;{" "}
                   <span>
                     <svg
@@ -83,18 +94,19 @@ const ManageCookieModal: React.FC<Props> = ({ opened }) => {
                       <path d="M16 0h-5l1.8 1.8-6.8 6.8 1.4 1.4 6.8-6.8 1.8 1.8z" />
                     </svg>
                   </span>
-                </Link>
-                <div className="float-right space-x-11">
+                </a>
+                <div className="flex justify-end flex-wrap space-x-2 sm:space-x-11">
                   <button
                     type="button"
-                    className="inline-flex justify-center rounded-[20px] border-2 border-[#259ae9] bg-none px-4 py-2 text-sm font-medium text-[#259ae9] w-[170px] focus:outline-none"
-                    onClick={closeModal}
+                    className="justify-center rounded-[20px] border-2 border-[#259ae9] bg-none px-4 py-2 text-sm font-medium text-[#259ae9] w-[160px] sm:w-[170px] focus:outline-none"
+                    onClick={()=> {  if(cookieStatus[0]||cookieStatus[1]||cookieStatus[2]) setCookie('policy', cookieStatus[0]||cookieStatus[1]||cookieStatus[2], { path: '/' }); closeModal();}}
                   >
                     Save preferences
                   </button>
                   <button
                     type="button"
-                    className="inline-flex justify-center rounded-[20px] bg-none px-4 py-2 text-sm font-medium bg-[#2aa8ff] text-white focus:outline-none"
+                    onClick={()=> { setCookie('policy', true, { path: '/' }); closeModal();}}
+                    className="justify-center rounded-[20px] bg-none px-4 py-2 text-sm font-medium bg-[#2aa8ff] text-white focus:outline-none"
                   >
                     Accept all
                   </button>

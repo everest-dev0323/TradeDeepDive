@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import ManageCookieModal from "./components/desktop/ManageCookieModal";
 import SettingCookieModal from "./components/desktop/SettingCookieModal";
+import { useCookies } from 'react-cookie';
 
 import Home from './pages/Home'
 import Main from './pages/Main'
@@ -16,6 +17,8 @@ import HouseRules from './pages/HouseRules'
 
 function App() {
   const [showManageModal, setShowManageModal] = useState(false);
+  const [cookies, setCookie] = useCookies(['policy']);
+  // setCookie('policy', true, { path: '/' });
 
   const openManageModal = (closed: boolean) => {
     setShowManageModal(closed);
@@ -35,11 +38,15 @@ function App() {
           <Route path='/terms-of-use' element={<TermsOfUse />} />
           <Route path='/houserules' element={<HouseRules />} />
         </Routes>
-        <SettingCookieModal
-          opened={true}
-          openManageModal={(closed: boolean) => openManageModal(closed)}
-        />
-        <ManageCookieModal opened={showManageModal} />
+        {
+          !cookies.policy && <>
+            <SettingCookieModal
+              opened={true}
+              openManageModal={(closed: boolean) => openManageModal(closed)}
+            />
+            <ManageCookieModal opened={showManageModal} />
+          </>
+        }
       </BrowserRouter>
     </>
   );

@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useCookies } from 'react-cookie';
 
 type Props = {
   opened: boolean
@@ -9,6 +10,7 @@ type Props = {
 
 const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
   let [isOpen, setIsOpen] = useState(true);
+  const [cookies, setCookie] = useCookies(['policy']);
 
   useEffect(() => {
     setIsOpen(opened);
@@ -40,13 +42,13 @@ const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
                 <p className="text-sm text-white">
                   We use cookes to ensure you get the best experience on our
                   website. To learn more about cookies please read our{" "}
-                  <Link to="/cookie-policy">
+                  <a target={"_blank"} href="/cookie-policy">
                     <span className="text-[#269eef]">Cookies Policy</span>.
-                  </Link>
+                  </a>
                 </p>
               </div>
 
-              <div className="mt-4 float-right space-x-5 sm:space-x-11">
+              <div className="mt-4 float-right space-x-1 sm:space-x-11">
                 <button
                   type="button"
                   className="inline-flex justify-center rounded-md bg-none px-4 py-2 text-sm font-medium text-[#259ae9] w-[170px] focus:outline-none"
@@ -56,6 +58,7 @@ const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
                 </button>
                 <button
                   type="button"
+                  onClick={()=> { setCookie('policy', true, { path: '/' }); closeModal();}}
                   className="inline-flex justify-center rounded-md bg-none px-4 py-2 text-sm font-medium w-[100px] sm:w-[170px] bg-[#2aa8ff] text-white focus:outline-none"
                 >
                   Accept all

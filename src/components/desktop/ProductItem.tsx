@@ -71,7 +71,7 @@ export default function ProductItem({
             </p>
           </div>
           <Link
-            to="/papal"
+            to="/follow-up"
             className="rounded-[20px] bg-[#933] px-9 tracking-widest py-2 font-medium text-white w-[170px] focus:outline-none"
           >
             {status ? "SUBSCRIBE" : "NOTIFY ME"}

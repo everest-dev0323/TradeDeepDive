@@ -36,7 +36,7 @@ export default function MProduct() {
               before:w-20 before:h-[1px] before:bg-[#9c864f] before:absolute before:-left-3 before:bottom-3 before:-rotate-[10deg]">${price}</p>
             <p className="text-3xl ml-6 text-[#fbb03b]">${price-price*discount/100}</p>
           </div>
-          <Link to="/papal" className="rounded-[20px] bg-[#933] px-9 tracking-widest py-2 font-medium text-white w-[170px] focus:outline-none">
+          <Link to="/follow-up" className="rounded-[20px] bg-[#933] px-9 tracking-widest py-2 font-medium text-white w-[170px] focus:outline-none">
             {status?"SUBSCRIBE":"NOTIFY ME"}
           </Link>
         </div>

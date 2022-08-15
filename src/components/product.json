@@ -1,24 +1,5 @@
 [
   {
-    "title": "Insight",
-    "content": "Insight offers you daily views on the events that are shaping companies, industries and markets around the world.",
-    "reference": [
-      "Limited Availability",
-      "Personal Mentoring",
-      "Daily Abrnalyis",
-      "Live Trading Room",
-      "Market Insights",
-      "Investor Psychology",
-      "Community Discord",
-      "Access To In-House Resources",
-      "Dedicated Support Team"
-    ],
-    "price": 500,
-    "discount": 10,
-    "status": true,
-    "color": "#33997d"
-  },
-  {
     "title": "Illume",
     "content": "Illume is an exclusive mentor program designed to take your investment knowledge to new heights.",
     "reference": [
@@ -36,6 +17,25 @@
     "discount": 10,
     "status": true,
     "color": "#6a3399"
+  },
+  {
+    "title": "Insight",
+    "content": "Insight offers you daily views on the events that are shaping companies, industries and markets around the world.",
+    "reference": [
+      "Limited Availability",
+      "Personal Mentoring",
+      "Daily Abrnalyis",
+      "Live Trading Room",
+      "Market Insights",
+      "Investor Psychology",
+      "Community Discord",
+      "Access To In-House Resources",
+      "Dedicated Support Team"
+    ],
+    "price": 500,
+    "discount": 10,
+    "status": true,
+    "color": "#33997d"
   },
   {
     "title": "Pursue",

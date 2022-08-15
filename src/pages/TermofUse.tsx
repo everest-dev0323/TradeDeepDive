@@ -68,7 +68,7 @@ export default function TermsOfUse() {
           written consent. You may not circumvent any mechanisms included in the
           Traderdeepdive content for preventing the unauthorized reproduction or
           distribution of the Traderdeepdive content. For additional information
-          on commercial and partnership inquiries with us, please see the
+          on commercial and partnership inquiries with us, please see the {" "}
           <a className="text-[#2aa8ff]" href="">
             Contacts page
           </a>

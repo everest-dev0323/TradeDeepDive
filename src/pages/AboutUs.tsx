@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
 import { Tab } from "@headlessui/react";
@@ -14,73 +14,89 @@ export default function AboutUs() {
   const [selected, setSelected] = useState<number>(1);
   const [shareSelected, setShareSelected] = useState<boolean>(false);
   const [showSocial, setShowSocial] = useState<boolean>(false);
+  const [clicked, setClicked] = useState<boolean>(false);
   const size = useWindowSize();
   const status = size.width >= 576 ? true : false;
   const url = status
-    ? "assets/imgs/desktop/home_bg.jpg"
-    : "assets/imgs/mobile/mb_home_bg.jpg";
-  const logo = status ? "assets/svg/logo.svg" : "assets/imgs/logo.png";
-
+    ? "assets/imgs/desktop/main_bg.jpg"
+    : "assets/imgs/mobile/mb_about_bg.jpg";
+  const logo = "assets/svg/logo.svg";
+  const ref = useRef(null);
 
   function openSocial() {
     setShowSocial(true);
   }
 
+  useEffect(()=> {
+    document.addEventListener("click", (e) => {
+      // console.log(concernedElement, e.target);
+      if (ref.current?.contains(e.target)) {
+        console.log("clicked inside");
+      } else {
+        setShowSocial(false);
+        setClicked(false);
+      }
+    }, false);
+  }, []);
+
   return (
     <div className="flex flex-col h-screen">
       <div
-        className="bg-cover bg-top bg-no-repeat h-screen w-screen fixed -z-10"
+        className="bg-[length:100vw_100vh] bg-top bg-no-repeat h-screen w-screen fixed -z-10"
         style={{ backgroundImage: `url(${url})` }}
       ></div>
 
       {!shareSelected ? (
         <div className="flex justify-between items-center mx-5 h-[25vw] sm:mx-16 sm:my-10 sm:h-[100px]">
           <Link to="/" className="cursor-pointer">
-            <img src={logo} className="w-1/6 sm:w-72" />
+            <img src={logo} className="w-1/6 sm:w-[100px]" />
           </Link>
           {size.width >= 576 ? (
             <div className="flex items-center">
-              {showSocial && (
-                <div className="items-center space-x-5 sm:flex">
-                  <a
-                    className="block duration-100 hover:scale-[1.1]"
-                    target="_blank"
-                    href="https://discord.gg/RgjDpBmbFw"
-                  >
-                    <img className="w-9" src="assets/svg/discord.svg" />
-                  </a>
-                  <a
-                    className="block duration-100 hover:scale-[1.1]"
-                    target="_blank"
-                    href="https://www.facebook.com/traderdeepdive"
-                  >
-                    <img className="w-9" src="assets/svg/facebook.svg" />
-                  </a>
-                  <a
-                    className="block duration-100 hover:scale-[1.1]"
-                    target="_blank"
-                    href="https://www.instagram.com/traderdeepdive"
-                  >
-                    <img className="w-9" src="assets/svg/instagram.svg" />
-                  </a>
-                  <a
-                    className="block duration-100 hover:scale-[1.1]"
-                    target="_blank"
-                    href="https://twitter.com/traderdeepdive"
-                  >
-                    <img className="w-9" src="assets/svg/twitter.svg" />
-                  </a>
-                </div>
-              )}
-              <button
-                className="rounded-3xl bg-none px-4 py-2 text-sm font-medium w-[130px] text-white focus:outline-none"
-                onClick={openSocial}
-              >
-                FIND US
-              </button>
+              <div className="flex" onClick={() => {event?.stopPropagation(); openSocial(); setClicked(true)}}
+              onMouseOver={() => {if(!clicked) setShowSocial(true)}}
+              onMouseOut={() => {setShowSocial(clicked)}}>
+                {showSocial && (
+                  <div className="items-center space-x-5 sm:flex" ref={ref}>
+                    <a
+                      className="block duration-300 hover:scale-[1.2]"
+                      target="_blank"
+                      href="https://discord.gg/RgjDpBmbFw"
+                    >
+                      <img className="w-9" src="assets/svg/discord.svg" />
+                    </a>
+                    <a
+                      className="block duration-300 hover:scale-[1.2]"
+                      target="_blank"
+                      href="https://www.facebook.com/traderdeepdive"
+                    >
+                      <img className="w-9" src="assets/svg/facebook.svg" />
+                    </a>
+                    <a
+                      className="block duration-300 hover:scale-[1.2]"
+                      target="_blank"
+                      href="https://www.instagram.com/traderdeepdive"
+                    >
+                      <img className="w-9" src="assets/svg/instagram.svg" />
+                    </a>
+                    <a
+                      className="block duration-300 hover:scale-[1.2]"
+                      target="_blank"
+                      href="https://twitter.com/traderdeepdive"
+                    >
+                      <img className="w-9" src="assets/svg/twitter.svg" />
+                    </a>
+                  </div>
+                )}
+                <button
+                  className="rounded-3xl bg-none px-4 py-2 text-sm font-medium w-[130px] text-white hover:scale-105 duration-300 outline-none"
+                >
+                  FIND US
+                </button>
+              </div>
               <Link
                 to="/products"
-                className="rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none"
+                className="rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white outline-none hover:scale-105 duration-300"
               >
                 SUBSCRIBE
               </Link>
@@ -107,12 +123,20 @@ export default function AboutUs() {
           size.width >= 576 ? (
             <What />
           ) : (
-            <CustomSlider />
+            <div className="flex flex-col h-full">
+              <CustomSlider />
+              <Link
+                to="/products"
+                className="mx-auto mb-[40px] block sm:hidden rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none hover:scale-105 hover:font-bold duration-300"
+              >
+                SUBSCRIBE
+              </Link>
+            </div>
           )
         ) : (
           <Why />
         )}
-        <div className="flex justify-evenly mb-5 sm:mb-16 md:mb-24">
+        <div className="flex justify-evenly mb-5 sm:mb-16 sm:mx-20 md:mb-24 md:mx-48">
           <div
             onClick={() => setSelected(1)}
             className={`${
@@ -123,12 +147,12 @@ export default function AboutUs() {
           >
             <img
               src="./assets/svg/who.svg"
-              className="m-auto w-6 h-6 sm:w-8 sm:h-8"
+              className="m-auto w-auto h-6 sm:w-auto sm:h-6"
             />
-            <p className="text-3xl sm:text-5xl">WHO</p>
+            <p className="text-2xl sm:text-4xl mt-2">WHO</p>
             {status && (
               <span
-                className={`bg-[#ff0000] absolute -left-[25px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${
+                className={`bg-[#ff0000] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[2px] w-[160px] block duration-500 ${
                   selected == 1 ? "opacity-100" : "opacity-0"
                 }`}
               ></span>
@@ -144,12 +168,12 @@ export default function AboutUs() {
           >
             <img
               src="./assets/svg/what.svg"
-              className="m-auto w-6 h-6 sm:w-8 sm:h-8"
+              className="m-auto w-auto h-6 sm:w-auto sm:h-6"
             />
-            <p className="text-3xl sm:text-5xl">WHAT</p>
+            <p className="text-2xl sm:text-4xl mt-2">WHAT</p>
             {status && (
               <span
-                className={`bg-[#ff0000] absolute -left-[10px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${
+                className={`bg-[#ff0000] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[2px] w-[160px] block duration-500 ${
                   selected == 2 ? "opacity-100" : "opacity-0"
                 }`}
               ></span>
@@ -165,12 +189,12 @@ export default function AboutUs() {
           >
             <img
               src="./assets/svg/why.svg"
-              className="m-auto w-6 h-6 sm:w-8 sm:h-8"
+              className="m-auto w-auto h-6 sm:w-auto sm:h-6"
             />
-            <p className="text-3xl sm:text-5xl">WHY</p>
+            <p className="text-2xl sm:text-4xl mt-2">WHY</p>
             {status && (
               <span
-                className={`bg-[#ff0000] absolute -left-[25px] -bottom-[10px] h-[2px] w-[160px] block duration-500 ${
+                className={`bg-[#ff0000] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[2px] w-[160px] block duration-500 ${
                   selected == 3 ? "opacity-100" : "opacity-0"
                 }`}
               ></span>
