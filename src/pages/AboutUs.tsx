@@ -21,7 +21,7 @@ export default function AboutUs() {
     ? "assets/imgs/desktop/main_bg.jpg"
     : "assets/imgs/mobile/mb_about_bg.jpg";
   const logo:string = "assets/svg/logo.svg";
-  const ref = useRef(null);
+  const ref = useRef<HTMLInputElement>(null);
 
   function openSocial() {
     setShowSocial(true);
@@ -29,7 +29,7 @@ export default function AboutUs() {
 
   useEffect(()=> {
     document.addEventListener("click", (e) => {
-      if (!ref.current?.contains(e.target)) {
+      if (ref.current && !ref.current.contains(e.target)) {
         setShowSocial(false);
         setClicked(false);
       }
