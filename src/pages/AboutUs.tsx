@@ -28,8 +28,9 @@ export default function AboutUs() {
   }
 
   useEffect(()=> {
-    document.addEventListener("click", (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
+    document.addEventListener("click", (event: MouseEvent) => {
+      const { target } = event;
+      if (ref.current && target && !ref.current?.contains(target as Node)) {
         setShowSocial(false);
         setClicked(false);
       }
