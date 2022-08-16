@@ -8,18 +8,18 @@ import MBar from "../components/mobile/MBar"
 export default function FollowUp() {
   const size: any = useWindowSize();
   const status: boolean = size.width>=576? true: false
-  const url: string = status ? 'assets/imgs/desktop/home_bg.jpg' : 'assets/imgs/mobile/mb_home_bg.jpg'
+  const url: string = status ? 'assets/imgs/desktop/main_bg.jpg' : 'assets/imgs/mobile/mb_products_bg.jpg'
   const bar: any = status ? <DBar/> :<MBar/>
   return (
     <div className="flex flex-col h-screen">
-      <div className="bg-cover bg-top bg-no-repeat w-screen h-screen fixed -z-10" style={{ backgroundImage: `url(${url})` }}></div>
+      <div className="bg-[length:100vw_100vh] bg-top bg-no-repeat w-screen h-screen fixed -z-10" style={{ backgroundImage: `url(${url})` }}></div>
       <div className="flex h-full items-center">
         <div className="flex flex-col w-full h-full items-center justify-center mx-10">
           <div className="text-white text-center">
             <h1 className="text-5xl font-bold">WELCOME!</h1>
             <p className="text-lg mt-10">WHAT'S NEXT?</p>
           </div>
-          <div className="flex flex-wrap justify-evenly w-full gap-5">
+          <div className="flex flex-wrap justify-between sm:justify-evenly w-full gap-5">
             <div className="w-xs sm:text-center gap-5 sm:gap-0 text-white space-y-[10px] sm:space-y-4 flex sm:block">
               <h1 className="text-[#026ca7] w-12 font-extrabold text-7xl sm:w-auto">1</h1>
               <div className="flex justify-between w-full sm:block sm:space-y-4">

@@ -18,9 +18,6 @@ export default function Why() {
             <br/><br/>One day we hope we can add you to this section to help others get onboard too!</p>
         </div>
         <img className="duration-500 hover:sm:scale-[1.1] cursor-pointer h-[80px] sm:w-[100px] sm:h-[100px] order-1" src="./assets/svg/play.svg" alt="" onClick={()=>setIsOpened(true)}/>
-        {size.width<576 && <div className="flex justify-center mb-10 order-3">
-          <Link to='/products' className="rounded-xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none xs:tracking-[3px]">SUBSCRIBE</Link>
-        </div>}
       </div>
     </div>
   )

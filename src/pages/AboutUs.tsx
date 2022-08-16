@@ -21,7 +21,7 @@ export default function AboutUs() {
     ? "assets/imgs/desktop/main_bg.jpg"
     : "assets/imgs/mobile/mb_about_bg.jpg";
   const logo:string = "assets/svg/logo.svg";
-  const ref = useRef<HTMLInputElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   function openSocial() {
     setShowSocial(true);
@@ -30,7 +30,7 @@ export default function AboutUs() {
   useEffect(()=> {
     document.addEventListener("click", (event: MouseEvent) => {
       const { target } = event;
-      if (ref.current && target && !ref.current?.contains(target as Node)) {
+      if (ref.current && target && !ref.current?.contains(target  as Node)) {
         setShowSocial(false);
         setClicked(false);
       }
@@ -116,7 +116,15 @@ export default function AboutUs() {
       )}
       <div className="flex flex-col h-full">
         {selected == 1 ? (
-          <Who />
+          <>
+            <Who />
+            <Link
+                to="/products"
+                className="mx-auto mb-[40px] block sm:hidden rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none hover:scale-105 hover:font-bold duration-300"
+              >
+                SUBSCRIBE
+              </Link>
+          </>
         ) : selected == 2 ? (
           size.width >= 576 ? (
             <What />
@@ -132,7 +140,15 @@ export default function AboutUs() {
             </div>
           )
         ) : (
-          <Why />
+          <>
+            <Why />
+            <Link
+                to="/products"
+                className="mx-auto mb-[40px] block sm:hidden rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none hover:scale-105 hover:font-bold duration-300"
+              >
+                SUBSCRIBE
+            </Link>
+          </>
         )}
         <div className="flex justify-evenly mb-5 sm:mb-16 sm:mx-20 md:mb-24 md:mx-48">
           <div
