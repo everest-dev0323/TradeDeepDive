@@ -21,7 +21,6 @@ export default function ProductItem({
   color,
 }: propType) {
   const [checked, setChecked] = useState<boolean>(false);
-  console.log(color);
   return (
     <div className="max-w-xs">
       <div>

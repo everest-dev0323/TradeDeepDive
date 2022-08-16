@@ -16,13 +16,23 @@ import TermsOfUse from "./pages/TermofUse"
 import HouseRules from './pages/HouseRules'
 
 function App() {
-  const [showManageModal, setShowManageModal] = useState(false);
+  const [showManageModal, setShowManageModal] = useState<boolean>(false);
   const [cookies, setCookie] = useCookies(['policy']);
   // setCookie('policy', true, { path: '/' });
+  const [showCookieModal, setShowCookieModal] = useState<boolean>(false)
 
   const openManageModal = (closed: boolean) => {
     setShowManageModal(closed);
   };
+
+  // useEffect(() => {
+  //   // if(cookies.policy == "true") {
+  //   //   setShowCookieModal(false);
+  //   // } else {
+  //   //   setShowCookieModal(true);
+  //   // }
+    console.log("adf")
+  // })
 
   return (
     <>
@@ -39,7 +49,7 @@ function App() {
           <Route path='/houserules' element={<HouseRules />} />
         </Routes>
         {
-          !cookies.policy && <>
+          showCookieModal && <>
             <SettingCookieModal
               opened={true}
               openManageModal={(closed: boolean) => openManageModal(closed)}

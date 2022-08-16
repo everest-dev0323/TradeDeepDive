@@ -2,7 +2,7 @@ import React from "react";
 export default function MBar() {
   return (
     <div className="items-center justify-center
-      flex md:h-[100px] lg:h-[150px] xl:h-[200px] ">
+      flex sm:h-[110px] lg:h-[150px] xl:h-[200px] ">
       <a className="block p-5 duration-300 hover:scale-[1.1]" target="_blank" href="https://discord.gg/RgjDpBmbFw">
           <img className="w-11 h-11" src="assets/svg/discord.svg" />
       </a>

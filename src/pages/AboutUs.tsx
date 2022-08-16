@@ -16,11 +16,11 @@ export default function AboutUs() {
   const [showSocial, setShowSocial] = useState<boolean>(false);
   const [clicked, setClicked] = useState<boolean>(false);
   const size = useWindowSize();
-  const status = size.width >= 576 ? true : false;
-  const url = status
+  const status: boolean = size.width >= 576 ? true : false;
+  const url: string = status
     ? "assets/imgs/desktop/main_bg.jpg"
     : "assets/imgs/mobile/mb_about_bg.jpg";
-  const logo = "assets/svg/logo.svg";
+  const logo:string = "assets/svg/logo.svg";
   const ref = useRef(null);
 
   function openSocial() {
@@ -29,10 +29,7 @@ export default function AboutUs() {
 
   useEffect(()=> {
     document.addEventListener("click", (e) => {
-      // console.log(concernedElement, e.target);
-      if (ref.current?.contains(e.target)) {
-        console.log("clicked inside");
-      } else {
+      if (!ref.current?.contains(e.target)) {
         setShowSocial(false);
         setClicked(false);
       }
