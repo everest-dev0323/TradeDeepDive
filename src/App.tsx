@@ -1,5 +1,7 @@
 import { lazy, Suspense, useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import ManageCookieModal from "./components/desktop/ManageCookieModal";
 import SettingCookieModal from "./components/desktop/SettingCookieModal";
@@ -46,6 +48,10 @@ function App() {
           </>
         }
       </BrowserRouter>
+      <ToastContainer autoClose={5000}
+        theme="colored"
+        className="toast-container"
+        toastClassName="dark-toast"/>
     </>
   );
 }

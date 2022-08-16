@@ -17,7 +17,7 @@ export default function VideoModal({url, open, status}: propType) {
   };
 
   return (
-    <div className="absolute h-[100%] w-[100vw] bg-[#ffb4b42b] top-0 left-0 z-20 flex justify-center items-center">
+    <div className="absolute h-[100%] w-[100vw] bg-[#ffb4b42b] top-0 left-0 z-20 flex justify-center items-center" onClick={()=>open(status)}>
       <div className="relative w-4/5 sm:w-1/2">
         <video className="top-1/2" autoPlay controls onEnded={()=>open(status)}>
           <source src={url} type="video/mp4" />

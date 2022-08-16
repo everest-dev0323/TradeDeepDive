@@ -7,7 +7,7 @@ import "./carousel.css"
 
 export default function CustomSlider() {
   return (
-    <div className="flex h-full items-center mx-11">
+    <div className="flex h-full items-center sm:px-11">
       <Carousel className="w-full" showArrows={false} showStatus={false} showThumbs={false} infiniteLoop={true}>
         {
           json.map((data, index) => {

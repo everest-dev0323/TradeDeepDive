@@ -21,7 +21,7 @@ export default function MProduct() {
       <div className="flex text-top h-20 absolute w-full">
         <div className={`tab bg-[#6a3399] ${selected==1&&"selected"}`} onClick={()=>setSelected(1)}><span>ILLUME</span></div>
         <div className={`tab bg-[#33997d] ${selected==2&&"selected"}`} onClick={()=>setSelected(2)}><span>INSIGHT</span></div>
-        <div className={`tab bg-[#993376] ${selected==3&&"selected"}`} onClick={()=>setSelected(3)}><span>PURUSE</span></div>
+        <div className={`tab bg-[#993376] ${selected==3&&"selected"}`} onClick={()=>setSelected(3)}><span>PURSUE</span></div>
       </div>
       <div className="flex flex-col mx-10 h-full">
         <div className="flex flex-col text-center justify-around h-full mt-28">
@@ -34,9 +34,9 @@ export default function MProduct() {
           <div className="-space-y-2">
             <p className="relative text-2xl text-[#496c7c] before:contents-[''] before:block
               before:w-20 before:h-[1px] before:bg-[#9c864f] before:absolute before:-left-3 before:bottom-3 before:-rotate-[10deg]">${price}</p>
-            <p className="text-3xl ml-6 text-[#fbb03b]">${price-price*discount/100}</p>
+            <p className="text-3xl ml-6 text-[#fbb03b]">${price-Math.ceil(price*discount/100)}</p>
           </div>
-          <Link to="/follow-up" className="rounded-[20px] bg-[#933] px-9 tracking-widest py-2 font-medium text-white w-[170px] focus:outline-none">
+          <Link to="/follow-up" className="rounded-[20px] bg-[#933] text-center tracking-widest py-2 font-medium text-white w-[170px] focus:outline-none">
             {status?"SUBSCRIBE":"NOTIFY ME"}
           </Link>
         </div>

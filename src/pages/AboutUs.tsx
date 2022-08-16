@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Fragment } from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
 import { Tab } from "@headlessui/react";
@@ -46,39 +46,39 @@ export default function AboutUs() {
 
       {!shareSelected ? (
         <div className="flex justify-between items-center mx-5 h-[25vw] sm:mx-16 sm:my-10 sm:h-[100px]">
-          <Link to="/" className="cursor-pointer">
-            <img src={logo} className="w-1/6 sm:w-[100px]" />
+          <Link to="/" className="cursor-pointer flex w-1/6 sm:w-[100px]">
+            <img src={logo} className="w-full" />
           </Link>
           {size.width >= 576 ? (
             <div className="flex items-center">
               <div className="flex" onClick={() => {event?.stopPropagation(); openSocial(); setClicked(true)}}
               onMouseOver={() => {if(!clicked) setShowSocial(true)}}
-              onMouseOut={() => {setShowSocial(clicked)}}>
+              onMouseOut={() => { setTimeout(()=>setShowSocial(clicked), 4000)}}>
                 {showSocial && (
                   <div className="items-center space-x-5 sm:flex" ref={ref}>
                     <a
-                      className="block duration-300 hover:scale-[1.2]"
+                      className="block duration-300 hover:scale-[1.1]"
                       target="_blank"
                       href="https://discord.gg/RgjDpBmbFw"
                     >
                       <img className="w-9" src="assets/svg/discord.svg" />
                     </a>
                     <a
-                      className="block duration-300 hover:scale-[1.2]"
+                      className="block duration-300 hover:scale-[1.1]"
                       target="_blank"
                       href="https://www.facebook.com/traderdeepdive"
                     >
                       <img className="w-9" src="assets/svg/facebook.svg" />
                     </a>
                     <a
-                      className="block duration-300 hover:scale-[1.2]"
+                      className="block duration-300 hover:scale-[1.1]"
                       target="_blank"
                       href="https://www.instagram.com/traderdeepdive"
                     >
                       <img className="w-9" src="assets/svg/instagram.svg" />
                     </a>
                     <a
-                      className="block duration-300 hover:scale-[1.2]"
+                      className="block duration-300 hover:scale-[1.1]"
                       target="_blank"
                       href="https://twitter.com/traderdeepdive"
                     >
@@ -87,7 +87,7 @@ export default function AboutUs() {
                   </div>
                 )}
                 <button
-                  className="rounded-3xl bg-none px-4 py-2 text-sm font-medium w-[130px] text-white hover:scale-105 duration-300 outline-none"
+                  className="rounded-3xl bg-none px-4 py-2 text-sm font-medium w-[130px] text-white outline-none"
                 >
                   FIND US
                 </button>
@@ -102,7 +102,7 @@ export default function AboutUs() {
           ) : (
             <img
               src="./assets/svg/share.svg"
-              className="w-12"
+              className="w-12 flex"
               onClick={() => setShareSelected(true)}
             />
           )}
@@ -150,7 +150,7 @@ export default function AboutUs() {
             </Link>
           </>
         )}
-        <div className="flex justify-evenly mb-5 sm:mb-16 sm:mx-20 md:mb-24 md:mx-48">
+        <div className="flex justify-evenly mb-5 sm:mb-16 sm:mx-20 md:mb-32 md:mx-40 lg:mx-60 xl:mx-80">
           <div
             onClick={() => setSelected(1)}
             className={`${
@@ -166,7 +166,7 @@ export default function AboutUs() {
             <p className="text-2xl sm:text-4xl mt-2">WHO</p>
             {status && (
               <span
-                className={`bg-[#ff0000] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[2px] w-[160px] block duration-500 ${
+                className={`bg-[#993333] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[4px] w-[160px] block duration-500 ${
                   selected == 1 ? "opacity-100" : "opacity-0"
                 }`}
               ></span>
@@ -187,7 +187,7 @@ export default function AboutUs() {
             <p className="text-2xl sm:text-4xl mt-2">WHAT</p>
             {status && (
               <span
-                className={`bg-[#ff0000] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[2px] w-[160px] block duration-500 ${
+                className={`bg-[#993333] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[4px] w-[160px] block duration-500 ${
                   selected == 2 ? "opacity-100" : "opacity-0"
                 }`}
               ></span>
@@ -208,7 +208,7 @@ export default function AboutUs() {
             <p className="text-2xl sm:text-4xl mt-2">WHY</p>
             {status && (
               <span
-                className={`bg-[#ff0000] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[2px] w-[160px] block duration-500 ${
+                className={`bg-[#993333] absolute -bottom-[25px] -translate-x-1/2 left-1/2 h-[4px] w-[160px] block duration-500 ${
                   selected == 3 ? "opacity-100" : "opacity-0"
                 }`}
               ></span>

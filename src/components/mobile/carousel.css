@@ -39,3 +39,7 @@
   opacity: 1 !important;
   background: #fff !important;
 }
+
+.slide div {
+  padding: 0 20px 0 20px !important;
+}

@@ -16,6 +16,10 @@ module.exports = {
         ingisght: "#33997d",
         illume: "#6a3399",
         pursure: "#993376"
+      },
+      fontFamily: {
+        "serif": ['Alegreya', 'serif'],
+        "sans": ['Raleway', 'sans-serif']
       }
     },
   },
