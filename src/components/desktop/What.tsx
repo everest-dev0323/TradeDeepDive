@@ -32,7 +32,7 @@ export default function What() {
         </div>
         <div className="text-white text-center">
           <p className="font-bold text-3xl mb-2">Dedicated Support Team</p>
-          <p>Whatever vour question, subscription enquries,<br/>
+          <p>Whatever your question, subscription enquries,<br/>
             course related support or follow up. We are here <br/>
             for you every step of the way!</p>
         </div>
