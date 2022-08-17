@@ -54,7 +54,7 @@ export default function AboutUs() {
             <div className="flex items-center">
               <div className="flex" onClick={() => {event?.stopPropagation(); openSocial(); setClicked(true)}}
               onMouseOver={() => {if(!clicked) setShowSocial(true)}}
-              onMouseOut={() => { setTimeout(()=>setShowSocial(clicked), 4000)}}>
+              onMouseOut={() => setShowSocial(clicked)}>
                 {showSocial && (
                   <div className="items-center space-x-5 sm:flex" ref={ref}>
                     <a

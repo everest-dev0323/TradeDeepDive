@@ -12,7 +12,7 @@ export default function What() {
         </div>
         <div className="text-white text-center">
           <h2 className="font-bold text-3xl mb-5">Community Discord</h2>
-          <p>Access to resources that help streamline your analysis.<br/>
+          <p>Access resources that help streamline your analysis.<br/>
             Discuss analysis and trade ideas with fellow traders.<br/>
             Take part in special events with like-minded people.</p>
         </div>
@@ -27,12 +27,12 @@ export default function What() {
         <div className="text-white text-center -mt-16">
           <h2 className="font-bold text-3xl mb-5">Bespoke Training</h2>
           <p>Understand how analyse macro and micro economic data.<br/>
-            Discover the power of understanding investor psyhcology.<br/>
+            Discover the power of understanding investor psychology.<br/>
             Learn to predict market moves hours before they happen.</p>
         </div>
         <div className="text-white text-center">
-          <p className="font-bold text-3xl mb-2">Dedicated Support Team</p>
-          <p>Whatever your question, subscription enquries,<br/>
+          <p className="font-bold text-3xl mb-5">Dedicated Support Team</p>
+          <p>Whatever your question, subscription enquiries,<br/>
             course related support or follow up. We are here <br/>
             for you every step of the way!</p>
         </div>
