@@ -40,7 +40,7 @@ const Home = () => {
       </Link>}
       <div className="h-full flex flex-col items-center justify-center">
         <Link to="/about-us" className="flex relative bottom-0 flex-col justify-center items-center text-center h-max">
-          <img src={'assets/svg/logo.svg'} className="m-auto w-[200px] sm:w-[250px] md:w-[300px] xl:w-[340px]" />
+          <img src={'assets/svg/logo.svg'} className="m-auto w-[200px] sm:w-[250px] md:w-[280px] xl:w-[300px]" />
           <p className="text-[15px] text-[#fff] mt-5 sm:text-[25px]">{text}</p>
         </Link>
       </div>
