@@ -23,9 +23,9 @@ export default function Main() {
 
   const start = () => {
     let validate = 0;
-    if(user.username == "") { validate = 1; toast.info("Username is required.")}
-    if(user.email == "") {validate = 1; toast.info("Email is required.")}
-    if(!user.checked) { validate = 1; toast.info("Please check the cookie option.")}
+    if(user.username == "") { validate = 1; toast.warn("Username is required.")}
+    if(user.email == "") {validate = 1; toast.warn("Email is required.")}
+    if(!user.checked) { validate = 1; toast.warn("Please check the cookie option.")}
     if(validate == 1) return;
     setCookie('email', user.email, { path: '/' })
     navigate("/about-us");
