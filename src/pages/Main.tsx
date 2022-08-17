@@ -47,13 +47,13 @@ export default function Main() {
       <div className="fixed bg-[length:100vw_100vh] bg-top bg-no-repeat h-screen w-screen -z-10" style={{ backgroundImage: `url(${url})` }}></div>
       <div className="my-6 sm:my-10 flex justify-center">
         <Link to="/" className="cursor-pointer">
-          <img src={logo} className="w-[13vh] m-auto sm:w-[200px]" />
+          <img src={logo} className="w-[13vh] m-auto sm:w-[180px]" />
         </Link>
       </div>
       <div className="text-center h-full flex flex-col">
         <div className="mx-10 flex flex-col justify-around h-full text-center">
           <h1 className="text-2xl font-medium font-sans sm:text-5xl sm:font-[700]">Learn Market{size.width>=576?<br />:" "}Analysis Now!</h1>
-          <div className="font-sans text-xl sm:text-[18px]">
+          <div className="font-sans text-xl sm:text-[20px]">
             <p className="max-w-2xl m-auto leading-6 sm:leading-10">Here at Trader Deep Dive we do out upmost to teach you how to
             understand and analyse markets, then work that into real viable trade ideas for you to action the very same day!</p>
           </div>
@@ -68,7 +68,7 @@ export default function Main() {
             <button onClick={start} className="bg-[#993333] hover:scale-105 duration-3 00 m-auto w-[270px] block leading-[40px] rounded-[10px]
              h-[40px] mt-1 sm:mt-0 sm:rounded-[25px] sm:w-[200px] px-[20px] ">GET STARTED</button>
           </div>
-          <div className="flex items-center justify-center my-8 sm:my-10 sm:w-[400px] text-left m-auto">
+          <div className="flex items-center justify-center my-8 sm:mb-4 sm:mt-10 sm:w-[400px] text-left m-auto">
             <input type="checkbox" className="w-[30px] h-[30px]" checked={user.checked} onClick={()=>setUser({...user, checked:!user.checked})} />
             <p className="leading-[15px] ml-3">
               <span>I have read and agree to the <a target={"_blank"} href="/terms-of-use" className="text-[#2aa8ff]">Terms of Use</a> as well as </span>
