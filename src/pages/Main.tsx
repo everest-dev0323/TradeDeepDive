@@ -54,19 +54,19 @@ export default function Main() {
         <div className="mx-10 flex flex-col justify-evenly h-full text-center">
           <h1 className="text-2xl font-medium font-sans sm:text-6xl sm:font-[700]">Learn Market{size.width>=576?<br />:" "}Analysis Now!</h1>
           <div className="font-sans text-xl sm:text-[20px]">
-            <p className="max-w-2xl m-auto leading-6 sm:leading-8">Here at Trader Deep Dive we do out upmost to teach you how to
+            <p className="max-w-2xl m-auto leading-6 sm:leading-8">Here at Trader Deep Dive we do our upmost to teach you how to
             understand and analyse markets, then work that into real viable trade ideas for you to action the very same day!</p>
           </div>
         </div>
         <div className="mx-10">
-          <p className="font-serif text-[17px] sm:text-[20px]">Start now and get <i><span className="text-[#fbb03b] text-[20px] font-bold">10% off</span></i> your subscription!</p>
+          <p className="font-serif text-[17px] sm:text-[20px]">Start now and get <i><span className="text-[#fbb03b] text-[22px] font-bold">10% off</span></i> your subscription!</p>
           <div className="max-w-2xl m-auto mt-5 flex gap-2 flex-wrap justify-center items-center flex-col sm:flex-row sm:gap-5">
             <input type="text" className="text-black m-auto w-[270px] rounded-[10px] h-[40px] sm:rounded-[25px] sm:w-[200px] px-[20px]"
-             placeholder="username" name="username" onChange={(e) => setUserInfo(e)} value={user.username}/>
+             placeholder="name" name="username" onChange={(e) => setUserInfo(e)} value={user.username}/>
             <input type="email" className="text-black m-auto w-[270px] rounded-[10px] h-[40px] sm:rounded-[25px] sm:w-[200px] px-[20px]"
              placeholder="email" name="email" onChange={(e) => setUserInfo(e)} value={user.email}/>
             <button onClick={start} className="bg-[#993333] hover:scale-105 duration-3 00 m-auto w-[270px] block leading-[40px] rounded-[10px]
-             h-[40px] mt-1 sm:mt-0 sm:rounded-[25px] sm:w-[200px] px-[20px] ">GET STARTED</button>
+             h-[40px] mt-1 sm:mt-0 sm:rounded-[25px] sm:w-[200px] px-[14px] duration-300">GET STARTED</button>
           </div>
           <div className="flex items-center justify-center my-8 sm:mb-4 sm:mt-10 sm:w-[400px] text-left m-auto">
             <input type="checkbox" className="w-[30px] h-[30px]" checked={user.checked} onClick={()=>setUser({...user, checked:!user.checked})} />
