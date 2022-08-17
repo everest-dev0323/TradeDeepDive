@@ -10,7 +10,7 @@ export default function TermsOfUse() {
         style={{ backgroundImage: `url(${url})` }}
       ></div>
       <PolicyHeader />
-      <div className="mx-32 mb-20">
+      <div className="mx-5 sm:mx-32 mb-20">
         <h2 className="font-bold text-2xl mb-5">
           Terms of Use, Policies and Disclaimers
         </h2>
@@ -68,8 +68,12 @@ export default function TermsOfUse() {
           written consent. You may not circumvent any mechanisms included in the
           Traderdeepdive content for preventing the unauthorized reproduction or
           distribution of the Traderdeepdive content. For additional information
-          on commercial and partnership inquiries with us, please see the {" "}
-          <a className="text-[#2aa8ff]" href="https://discord.gg/RgjDpBmbFw)" target={"_blank"}>
+          on commercial and partnership inquiries with us, please see the{" "}
+          <a
+            className="text-[#2aa8ff]"
+            href="https://discord.gg/RgjDpBmbFw)"
+            target={"_blank"}
+          >
             Contacts page
           </a>
           .
@@ -298,11 +302,7 @@ export default function TermsOfUse() {
               subscription. An email request or support ticket asking for your
               subscription to be cancelled is not considered cancellation. You
               may cancel your subscription at any time by visiting the billing
-              section of your{" "}
-              <a className="text-[#2aa8ff]" href="">
-                Profile Settings
-              </a>{" "}
-              page.
+              section of your Profile Settings page.
             </li>
             <li>
               If you cancel the service before the end of your current paid up
@@ -329,10 +329,9 @@ export default function TermsOfUse() {
               We offer refunds for recurring annual and 2-year payments on
               demand. If you have been billed for automatic annual and 2-year
               renewal of the service, you have 14 calendar days (after the
-              payment was made){" "}
-                to contact our support team
-              . If you don't do this, Traderdeepdive assumes that renewal of the
-              service is expected and the payment will not be refunded.
+              payment was made) to contact our support team . If you don't do
+              this, Traderdeepdive assumes that renewal of the service is
+              expected and the payment will not be refunded.
             </li>
             <li>
               Refunds are available only after an automatic deduction for annual
@@ -364,7 +363,11 @@ export default function TermsOfUse() {
         <p className="mb-5">
           By submitting ideas, content, suggestions, documents, and/or proposals
           ("Contributions") to Traderdeepdive through our contact or{" "}
-          <a className="text-[#2aa8ff]" href="https://discord.gg/YjZxnjPt9z" target={"_blank"}>
+          <a
+            className="text-[#2aa8ff]"
+            href="https://discord.gg/YjZxnjPt9z"
+            target={"_blank"}
+          >
             feedback discord channels
           </a>{" "}
           you acknowledge and agree that: (a) your Contributions do not contain
@@ -394,18 +397,15 @@ export default function TermsOfUse() {
         <h3 className="font-bold text-lg mb-3">14. Termination</h3>
         <p className="mb-5">
           Upon your request, your account can be deleted from Traderdeepdive.
-          You may delete your account at any time by visiting your{" "}
-          <a className="text-[#2aa8ff]" href="">
-            Profile Settings
-          </a>{" "}
-          page. If you requested your account be deleted, we will delete the
-          personal data associated with your account, however certain personal
-          data will be retained if it has been integrated into data that is
-          integral to our systems and site, including data in communications you
-          have sent via our site. This data is necessarily retained for the
-          integrity of the data on the site and our legitimate business
-          purposes, including auditing, security and other legitimate interests
-          (please refer to our{" "}
+          You may delete your account at any time by visiting your Profile
+          Settings page. If you requested your account be deleted, we will
+          delete the personal data associated with your account, however certain
+          personal data will be retained if it has been integrated into data
+          that is integral to our systems and site, including data in
+          communications you have sent via our site. This data is necessarily
+          retained for the integrity of the data on the site and our legitimate
+          business purposes, including auditing, security and other legitimate
+          interests (please refer to our{" "}
           <Link className="text-[#2aa8ff]" to="/privacy-policy">
             Privacy Policy
           </Link>{" "}

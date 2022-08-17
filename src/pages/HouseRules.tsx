@@ -9,7 +9,7 @@ export default function HouseRules() {
         style={{ backgroundImage: `url(${url})` }}
       ></div>
       <PolicyHeader />
-      <div className="mx-32 mb-20">
+      <div className="mx-5 sm:mx-32 mb-20">
         <h2 className="font-bold text-2xl mb-5">Traderdeepdive House Rules</h2>
         <p className="mb-5">
           Welcome to Traderdeepdive, home to traders and investors from
@@ -25,14 +25,18 @@ export default function HouseRules() {
           environment where all traders are welcome. Let's build, not break
           things, people.
         </p>
-        <h3 className="font-bold text-lg mb-3">1. Make ideas understandable.</h3>
+        <h3 className="font-bold text-lg mb-3">
+          1. Make ideas understandable.
+        </h3>
         <p className="mb-5">
           When publishing content, make sure to write an easy-to-read title and
           a thoughtful description so that everyone can get the gist of your
           published work and the reasoning behind it. If the idea doesn't have
           any reasoning, then you probably shouldn't be posting it.
         </p>
-        <h3 className="font-bold text-lg mb-3">2. All content should be ad-free.</h3>
+        <h3 className="font-bold text-lg mb-3">
+          2. All content should be ad-free.
+        </h3>
         <p className="mb-5">
           This isn't Craigslist, so stop treating Traderdeepdive content like
           your own personable advertising board. All content has to be free from
@@ -112,7 +116,9 @@ export default function HouseRules() {
         <h3 className="font-bold text-lg mb-3">
           10. Follow the correct advertising procedure.
         </h3>
-        <p className="mb-5">To advertise with us, you must reach out to our team here.</p>
+        <p className="mb-5">
+          To advertise with us, you must reach out to our team here.
+        </p>
         <h3 className="font-bold text-lg mb-3">
           11. Brokers need a special account.
         </h3>
@@ -160,9 +166,9 @@ export default function HouseRules() {
           site. Remember it's your responsibility to understand them BEFORE you
           use these features. Learn about them here:
           <ul className="list-disc list-inside">
-            <li className="text-[#2aa8ff]"><a href="">Streams and stream comments rules</a></li>
-            <li className="text-[#2aa8ff]"><a href="">I want to know more about moderation</a></li>
-            <li className="text-[#2aa8ff]"><a href="">How do I become a moderator?</a></li>
+            <li className="text-[#2aa8ff]">
+              <a href="https://discord.gg/RgjDpBmbFw">Discord Link</a>
+            </li>
           </ul>
           Finally, this text is not exhaustive and we reserve the right to take
           any measures we deem necessary against user actions not listed in the

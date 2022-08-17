@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useWindowSize from "../components/common/WindowSizeHook";
 
 import PolicyHeader from "../components/desktop/PolicyHeader";
 
@@ -7,6 +8,7 @@ import "./cookie.css";
 
 export default function CookiePolicy() {
   const url = "assets/imgs/desktop/main_bg.jpg";
+  const size = useWindowSize();
   return (
     <div className="w-full h-full">
       <div
@@ -14,7 +16,7 @@ export default function CookiePolicy() {
         style={{ backgroundImage: `url(${url})` }}
       ></div>
       <PolicyHeader />
-      <div className="mx-32 mb-20">
+      <div className="mx-5 sm:mx-32 mb-20">
         <h2 className="font-bold text-2xl mb-5">Cookies Policy</h2>
         <p className="mb-5">
           This Cookies Policy ("Cookies Policy") describes cookies and other
@@ -58,7 +60,11 @@ export default function CookiePolicy() {
           interface customization, security, research and analysis to improve
           the functionality of our Site, and advertising (for more information
           on how we use your data, please read our{" "}
-          <a href="/privacy-policy" className="text-[#2aa8ff]" target={"_blank"}>
+          <a
+            href="/privacy-policy"
+            className="text-[#2aa8ff]"
+            target={"_blank"}
+          >
             Privacy Policy
           </a>
           ).
@@ -128,11 +134,46 @@ export default function CookiePolicy() {
 
           <li style={{ listStyle: "none" }}>
             <ul className="list-disc list-inside mb-5">
-              <li className="text-[#2aa8ff]"><a href="https://support.google.com/chrome/answer/95647" target={"_blank"}>Google Chrome</a></li>
-              <li className="text-[#2aa8ff]"><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" target={"_blank"}>Mozilla Firefox</a></li>
-              <li className="text-[#2aa8ff]"><a href="https://support.microsoft.com/en-gb/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target={"_blank"}>Microsoft Edge</a></li>
-              <li className="text-[#2aa8ff]"><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" target={"_blank"}>Safari (macOS)</a></li>
-              <li className="text-[#2aa8ff]"><a href="https://support.apple.com/en-gb/HT201265" target={"_blank"}>Safari (iOS)</a></li>
+              <li className="text-[#2aa8ff]">
+                <a
+                  href="https://support.google.com/chrome/answer/95647"
+                  target={"_blank"}
+                >
+                  Google Chrome
+                </a>
+              </li>
+              <li className="text-[#2aa8ff]">
+                <a
+                  href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer"
+                  target={"_blank"}
+                >
+                  Mozilla Firefox
+                </a>
+              </li>
+              <li className="text-[#2aa8ff]">
+                <a
+                  href="https://support.microsoft.com/en-gb/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+                  target={"_blank"}
+                >
+                  Microsoft Edge
+                </a>
+              </li>
+              <li className="text-[#2aa8ff]">
+                <a
+                  href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac"
+                  target={"_blank"}
+                >
+                  Safari (macOS)
+                </a>
+              </li>
+              <li className="text-[#2aa8ff]">
+                <a
+                  href="https://support.apple.com/en-gb/HT201265"
+                  target={"_blank"}
+                >
+                  Safari (iOS)
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -143,79 +184,84 @@ export default function CookiePolicy() {
             browser manufacturer provides.
           </b>
         </p>
-        <p className="mb-5">
-          <b>
-            More information on our use of cookies can be found in the table
-            below:
-          </b>
-        </p>
-        <table className="w-4/5 border border-white mb-5">
-          <thead className="bg-white">
-            <tr className="h-14">
-              <th className="text-[#000] text-start w-1/6">Score</th>
-              <th className="text-[#000] text-start w-1/6">
-                Categories of Use
-              </th>
-              <th className="text-[#000] text-start w-1/6">Domain</th>
-              <th className="text-[#000] text-start w-1/2">Description</th>
-            </tr>
-          </thead>
-          <tbody className="mx-3">
-            <tr className="border border-white">
-              <td>Trader Deep Dive</td>
-              <td>Necessary cookies</td>
-              <td>.traderdeepdive,com</td>
-              <td>
-                We use These cookies for user authentication and identification,
-                in order to make our features and functions more readity
-                available. In addition, we use necessary cookies for user
-                interface customization and security features such as detecting
-                fraud and abuse. We also use Web Storage and IndexedDB
-                technologies to store user preferences and information that is
-                necessary for providing our services. We use evercookies
-                technology to implement to security features and detect
-                violations of our Terms of Use. Examples of the specific cookies
-                used for this purpose are cachec, sessionid, and tv_ecuid.
-              </td>
-            </tr>
-            <tr className="border border-white">
-              <td>Trader Deep Dive</td>
-              <td>Necessary cookies</td>
-              <td>.traderdeepdive,com</td>
-              <td>
-                We use These cookies for user authentication and identification,
-                in order to make our features and functions more readity
-                available. In addition, we use necessary cookies for user
-                interface customization and security features such as detecting
-                fraud and abuse.
-              </td>
-            </tr>
-            <tr className="border border-white">
-              <td>Trader Deep Dive</td>
-              <td>Necessary cookies</td>
-              <td>.traderdeepdive,com</td>
-              <td>
-                We use These cookies for user authentication and identification,
-                in order to make our features and functions more readity
-                available. In addition, we use necessary cookies for user
-                interface customization and security features such as detecting
-                fraud and abuse.
-              </td>
-            </tr>
-            <tr>
-              <td>Trader Deep Dive</td>
-              <td>Necessary cookies</td>
-              <td>.traderdeepdive,com</td>
-              <td>
-                We use These cookies for user authentication and identification,
-                in order to make our features and functions more readity
-                available. In addition, we use necessary cookies for user
-                interface customization and security features such as detecting
-                fraud and abuse.
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        {size.width >= 576 && (
+          <>
+            <p className="mb-5">
+              <b>
+                More information on our use of cookies can be found in the table
+                below:
+              </b>
+            </p>
+            <table className="w-4/5 border border-white mb-5">
+              <thead className="bg-white">
+                <tr className="h-14">
+                  <th className="text-[#000] text-start w-1/6">Score</th>
+                  <th className="text-[#000] text-start w-1/6">
+                    Categories of Use
+                  </th>
+                  <th className="text-[#000] text-start w-1/6">Domain</th>
+                  <th className="text-[#000] text-start w-1/2">Description</th>
+                </tr>
+              </thead>
+              <tbody className="mx-3">
+                <tr className="border border-white">
+                  <td>Trader Deep Dive</td>
+                  <td>Necessary cookies</td>
+                  <td>.traderdeepdive,com</td>
+                  <td>
+                    We use These cookies for user authentication and
+                    identification, in order to make our features and functions
+                    more readity available. In addition, we use necessary
+                    cookies for user interface customization and security
+                    features such as detecting fraud and abuse. We also use Web
+                    Storage and IndexedDB technologies to store user preferences
+                    and information that is necessary for providing our
+                    services. We use evercookies technology to implement to
+                    security features and detect violations of our Terms of Use.
+                    Examples of the specific cookies used for this purpose are
+                    cachec, sessionid, and tv_ecuid.
+                  </td>
+                </tr>
+                <tr className="border border-white">
+                  <td>Trader Deep Dive</td>
+                  <td>Necessary cookies</td>
+                  <td>.traderdeepdive,com</td>
+                  <td>
+                    We use These cookies for user authentication and
+                    identification, in order to make our features and functions
+                    more readity available. In addition, we use necessary
+                    cookies for user interface customization and security
+                    features such as detecting fraud and abuse.
+                  </td>
+                </tr>
+                <tr className="border border-white">
+                  <td>Trader Deep Dive</td>
+                  <td>Necessary cookies</td>
+                  <td>.traderdeepdive,com</td>
+                  <td>
+                    We use These cookies for user authentication and
+                    identification, in order to make our features and functions
+                    more readity available. In addition, we use necessary
+                    cookies for user interface customization and security
+                    features such as detecting fraud and abuse.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Trader Deep Dive</td>
+                  <td>Necessary cookies</td>
+                  <td>.traderdeepdive,com</td>
+                  <td>
+                    We use These cookies for user authentication and
+                    identification, in order to make our features and functions
+                    more readity available. In addition, we use necessary
+                    cookies for user interface customization and security
+                    features such as detecting fraud and abuse.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </>
+        )}
 
         <h3 className="font-bold text-lg mb-3">Web beacons</h3>
 
@@ -237,10 +283,20 @@ export default function CookiePolicy() {
           TraderDeepDive Site and it will be collected by Google services. For
           more information on Google’s use of data for marketing and analytics
           purposes, please see{" "}
-          <a className="text-[#2aa8ff]" href="https://policies.google.com/technologies/ads">
+          <a
+            className="text-[#2aa8ff]"
+            href="https://policies.google.com/technologies/ads"
+          >
             Advertising – Privacy & Terms
           </a>{" "}
-          and <a className="text-[#2aa8ff]" href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.
+          and{" "}
+          <a
+            className="text-[#2aa8ff]"
+            href="https://policies.google.com/privacy"
+          >
+            Google’s Privacy Policy
+          </a>
+          .
         </p>
 
         <h3 className="font-bold text-lg mb-3">Changes</h3>
