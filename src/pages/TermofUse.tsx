@@ -69,7 +69,7 @@ export default function TermsOfUse() {
           Traderdeepdive content for preventing the unauthorized reproduction or
           distribution of the Traderdeepdive content. For additional information
           on commercial and partnership inquiries with us, please see the {" "}
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="https://discord.gg/RgjDpBmbFw)" target={"_blank"}>
             Contacts page
           </a>
           .
@@ -330,9 +330,7 @@ export default function TermsOfUse() {
               demand. If you have been billed for automatic annual and 2-year
               renewal of the service, you have 14 calendar days (after the
               payment was made){" "}
-              <a className="text-[#2aa8ff]" href="">
                 to contact our support team
-              </a>
               . If you don't do this, Traderdeepdive assumes that renewal of the
               service is expected and the payment will not be refunded.
             </li>
@@ -366,7 +364,7 @@ export default function TermsOfUse() {
         <p className="mb-5">
           By submitting ideas, content, suggestions, documents, and/or proposals
           ("Contributions") to Traderdeepdive through our contact or{" "}
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="https://discord.gg/YjZxnjPt9z" target={"_blank"}>
             feedback discord channels
           </a>{" "}
           you acknowledge and agree that: (a) your Contributions do not contain

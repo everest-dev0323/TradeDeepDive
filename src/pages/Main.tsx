@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
@@ -37,6 +37,10 @@ export default function Main() {
       [e.target.name]: e.target.value
     })
   }
+
+  useEffect(() => {
+    document.title = "TraderDeepDive - Opt-In"
+  }, [])
 
   return (
     <div className="flex flex-col h-screen">

@@ -118,7 +118,7 @@ export default function PrivacyPolicy() {
           payment account information that we require for the purpose of
           recording and processing your account registration. For further
           details, please refer to the point below titled "
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="#payment">
             Payment information
           </a>
           ", under the section headed, "When we share your personal
@@ -140,23 +140,23 @@ export default function PrivacyPolicy() {
           allow us to provide you with a better user experience when you browse
           our Website and helps to improve its features. More detailed
           information on the use of cookies can be found in our{" "}
-          <Link className="text-[#2aa8ff]" to="/cookie-policy">
+          <a className="text-[#2aa8ff]" href="/cookie-policy" target={"_blank"}>
             Cookies Policy
-          </Link>
+          </a>
           .<br />
           We also use web beacons (tiny graphics with a unique identifier) for
           analytics and advertising purposes and to develop, test, and improve
           our services further, as described in our{" "}
-          <Link className="text-[#2aa8ff]" to="/cookie-policy">
+          <a className="text-[#2aa8ff]" href="/cookie-policy" target={"_blank"}>
             Cookies Policy
-          </Link>
+          </a>
           .
         </p>
         <h3 className="font-bold tx-lg mb-3">Log files</h3>
         <p className="mb-5">
           Like most websites, we use web server log files. Records in our log
           files include internet protocol (IP) addresses (see the "
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="#device">
             Device information
           </a>
           " section below for further details), browser types, internet service
@@ -166,7 +166,7 @@ export default function PrivacyPolicy() {
           that our terms of service agreement is being adhered to. Note that IP
           addresses are not tied to personal data in our web server log files.
         </p>
-        <h3 className="font-bold tx-lg mb-3">Device information</h3>
+        <h3 className="font-bold tx-lg mb-3" id="device">Device information</h3>
         <p className="mb-5">
           We collect the following information about the devices you use to
           interact with our services: IP address of the device (from which we
@@ -292,7 +292,7 @@ export default function PrivacyPolicy() {
           opt out of receiving marketing communications at any time by clicking
           "unsubscribe" in one of the emails (for more information on your
           rights, please see the "
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="#user-rights">
             User rights
           </a>
           " section below).
@@ -343,7 +343,7 @@ export default function PrivacyPolicy() {
               provide.
             </li>
             <li className="mt-3">
-              <span className="font-bold">Payment information</span>: Paid Users
+              <span className="font-bold" id="payment">Payment information</span>: Paid Users
               must provide payment information (name, payment card information
               or payment account information). This information is used for
               billing purposes only and is processed by our payment processors.
@@ -355,13 +355,13 @@ export default function PrivacyPolicy() {
               their privacy policies:
               <ul className="list-disc list-inside pl-6">
                 <li className="text-[#2aa8ff]">
-                  <a href="">PayPal Privacy Statement</a>
+                  <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full" target="_blank">PayPal Privacy Statement</a>
                 </li>
                 <li className="text-[#2aa8ff]">
-                  <a href="">Braintree Privacy Statement</a>
+                  <a href="https://www.paypal.com/us/webapps/mpp/ua/privacy-full" target="_blank">Braintree Privacy Statement</a>
                 </li>
                 <li className="text-[#2aa8ff]">
-                  <a href="">Coinbase Commerce Privacy Policy</a>
+                  <a href="https://commerce.coinbase.com/legal/privacy-policy/" target="_blank">Coinbase Commerce Privacy Policy</a>
                 </li>
               </ul>
             </li>
@@ -396,7 +396,7 @@ export default function PrivacyPolicy() {
                       Firebase — a development and analytics platform provided
                       by Google. For more information on what type of
                       information is collected, please visit the{" "}
-                      <a className="text-[#2aa8ff]" href="">
+                      <a className="text-[#2aa8ff]" href="https://policies.google.com/privacy" target={"_blank"}>
                         Google Privacy web page
                       </a>
                       .
@@ -406,7 +406,7 @@ export default function PrivacyPolicy() {
                       for understanding our mobile application users’ behaviour.
                       For more information on the handling of user data on
                       Flurry Analytics, please see their{" "}
-                      <a className="text-[#2aa8ff]" href="">
+                      <a className="text-[#2aa8ff]" href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html" target={"_blank"}>
                         Privacy Policy
                       </a>
                       .
@@ -415,7 +415,7 @@ export default function PrivacyPolicy() {
                       Amplitude — an analytics service for mobile apps. For more
                       information on the privacy practices of Amplitude, please
                       see their{" "}
-                      <a className="text-[#2aa8ff]" href="">
+                      <a className="text-[#2aa8ff]" href="https://amplitude.com/terms" target={"_blank"}>
                         Amplitude Terms
                       </a>
                       .
@@ -424,7 +424,7 @@ export default function PrivacyPolicy() {
                       Visual Studio App Center — owned by Microsoft. Their
                       applicable data protection provisions can be reviewed
                       under the{" "}
-                      <a className="text-[#2aa8ff]" href="">
+                      <a className="text-[#2aa8ff]" href="https://privacy.microsoft.com/en-us/PrivacyStatement" target={"_blank"}>
                         Microsoft Privacy Statement
                       </a>
                       .
@@ -435,7 +435,7 @@ export default function PrivacyPolicy() {
                       as well as certain events and actions in the application.
                       For more information on how AppsFlyer works and what data
                       it collects, please see{" "}
-                      <a className="text-[#2aa8ff]" href="">
+                      <a className="text-[#2aa8ff]" href="https://www.appsflyer.com/legal/services-privacy-policy/" target={"_blank"}>
                         AppsFlyer Services Privacy Policy
                       </a>
                       .
@@ -481,21 +481,21 @@ export default function PrivacyPolicy() {
                   Google Ad Manager and Google Ads — they help us serve and
                   measure the success of ads on our site. For more information
                   about how Google uses data, please refer to their{" "}
-                  <a className="text-[#2aa8ff]" href="">
+                  <a className="text-[#2aa8ff]" href="https://policies.google.com/technologies/partner-sites" target={"_blank"}>
                     Privacy & Terms
                   </a>{" "}
                   document as well as{" "}
-                  <a className="text-[#2aa8ff]" href="">
+                  <a className="text-[#2aa8ff]" href="https://policies.google.com/privacy" target={"_blank"}>
                     Google’s Privacy Policy
                   </a>
                   . You can opt out of this by visiting the{" "}
-                  <a className="text-[#2aa8ff]" href="">
+
                     Network Advertising Initiative opt-out page
-                  </a>{" "}
+                  {" "}
                   or by turning off the personalization of Google ads via their{" "}
-                  <a className="text-[#2aa8ff]" href="">
+
                     Ad Settings page
-                  </a>
+
                   .
                 </li>
                 <li>
@@ -519,17 +519,17 @@ export default function PrivacyPolicy() {
             <li className="mt-3">
               For more information about Twitter data processing, please see
               their{" "}
-              <a className="text-[#2aa8ff]" href="">
+              <a className="text-[#2aa8ff]" href="https://twitter.com/en/privacy" target={"_blank"}>
                 Privacy policy
               </a>
               . You can adjust the settings in your personal Twitter profile and
               opt to receive advertising. In case you don’t have a Twitter
               account, you can use Your{" "}
-              <a className="text-[#2aa8ff]" href="">
+              <a className="text-[#2aa8ff]" href=" http://www.youronlinechoices.com/" target={"_blank"}>
                 Online Choices website
               </a>
               or
-              <a className="text-[#2aa8ff]" href="">
+              <a className="text-[#2aa8ff]" href="https://optout.aboutads.info/?c=2&lang=EN" target={"_blank"}>
                 DAA's WebChoices Tool
               </a>{" "}
               to manage your ad experience.
@@ -552,11 +552,11 @@ export default function PrivacyPolicy() {
           background. Visitors are not informed that an analysis is being
           performed. The data recorded during analysis is forwarded to Google.
           More information on Google reCAPTCHA and the{" "}
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="https://policies.google.com/privacy" target={"_blank"}>
             Google Privacy Policy
           </a>{" "}
           can be found under the following links: Google’s Privacy Policy and{" "}
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="https://www.google.com/recaptcha/about/" target={"_blank"}>
             What is reCAPTCHA?
           </a>
           .
@@ -789,11 +789,11 @@ export default function PrivacyPolicy() {
           data protection authority of an European Union member state that is
           authorised to hear such concerns (you may find European Union Data
           Protection Authorities’ contact information{" "}
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0" target={"_blank"}>
             here
           </a>
           ) or to the
-          <a className="text-[#2aa8ff]" href="">
+          <a className="text-[#2aa8ff]" href="https://ico.org.uk/" target={"_blank"}>
             Information Commissioner's Office
           </a>{" "}
           (ICO), the UK supervisory authority for data protection issues. If you

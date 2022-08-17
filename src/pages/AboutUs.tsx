@@ -28,6 +28,7 @@ export default function AboutUs() {
   }
 
   useEffect(()=> {
+    document.title = "TraderDeepDive - About Us"
     document.addEventListener("click", (event: MouseEvent) => {
       const { target } = event;
       if (ref.current && target && !ref.current?.contains(target  as Node)) {

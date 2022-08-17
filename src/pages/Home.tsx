@@ -14,7 +14,10 @@ const Home = () => {
   const bar: any = status ? <DBar/> :<MBar/>
   const [cookies, setCookie] = useCookies(['email']);
 
-  const scale: number = size.width/575.0
+  useEffect(() => {
+    document.title = "TraderDeepDive - Home"
+  }, [])
+
   return (
     <div className="flex relative flex-col w-full h-screen">
       <div className="bg-[length:100vw_100vh] bg-top bg-no-repeat h-screen w-screen fixed top-0 -z-10" style={{ backgroundImage: `url(${url})` }}></div>

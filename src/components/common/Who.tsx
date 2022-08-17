@@ -10,7 +10,7 @@ export default function Who() {
 
   return (
     <div className="m-auto sm:pb-[90px]">
-      {isOpened && <VideoModal url="/uploads/why.mp4" open={setIsOpened} status={false}/> }
+      {isOpened && <VideoModal url="/uploads/who.mp4" open={setIsOpened} status={false}/> }
       <div className="flex h-full items-center justify-center sm:justify-evenly flex-col mx-10 gap-5 sm:gap-28 sm:flex-row">
         <div className="text-white font-sans max-w-2xl order-2 sm:order-1 space-y-3">
           <h3 className="font-bold text-4xl hidden sm:block">Who are we?</h3>

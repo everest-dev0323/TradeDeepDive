@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import useWindowSize from "../components/common/WindowSizeHook";
@@ -10,19 +10,22 @@ export default function FollowUp() {
   const status: boolean = size.width>=576? true: false
   const url: string = status ? 'assets/imgs/desktop/main_bg.jpg' : 'assets/imgs/mobile/mb_products_bg.jpg'
   const bar: any = status ? <DBar/> :<MBar/>
-
   const logo = 'assets/svg/logo.svg'
+
+  useEffect(() => {
+    document.title = "TraderDeepDive - Follow up"
+  }, [])
   return (
     <div className="flex flex-col h-screen">
       <div className="bg-[length:100vw_100vh] bg-top bg-no-repeat w-screen h-screen fixed -z-10" style={{ backgroundImage: `url(${url})` }}></div>
-      <div className="w-full h-full">
-        <div className="my-6 sm:my-10 flex justify-center">
+      <div className="w-full h-full flex flex-col">
+        <div className="mt-6 sm:mt-10 flex justify-center">
           <Link to="/" className="cursor-pointer">
             <img src={logo} className="w-[20vh] m-auto sm:w-[200px]" />
           </Link>
         </div>
-        <div className="flex h-full items-center">
-          <div className="flex flex-col w-full h-full items-center justify-center mx-10">
+        <div className="h-full flex flex-col">
+          <div className="flex flex-col h-full items-center justify-center mx-10">
             <div className="text-white text-center">
               <h1 className="text-5xl font-bold">WELCOME!</h1>
               <p className="text-lg mt-10">WHAT'S NEXT?</p>
@@ -58,8 +61,8 @@ export default function FollowUp() {
               </div>
             </div>
           </div>
+          {bar}
         </div>
-        {bar}
       </div>
     </div>
   )

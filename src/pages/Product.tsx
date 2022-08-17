@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 
 import useWindowSize from "../components/common/WindowSizeHook";
@@ -9,6 +9,10 @@ export default function Product() {
   const size = useWindowSize()
   const status = size.width >= 576?true:false
   const url = status ? 'assets/imgs/desktop/main_bg.jpg' : 'assets/imgs/mobile/mb_products_bg.jpg'
+
+  useEffect(() => {
+    document.title = "TraderDeepDive - Product"
+  })
   return (
     <div className="flex flex-col h-screen w-full">
       <div className="bg-[length:100vw_100vh] bg-top bg-no-repeat h-screen w-screen fixed -z-10" style={{backgroundImage: `url(${url})`}}></div>
