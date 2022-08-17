@@ -59,7 +59,7 @@ export default function Main() {
           </div>
         </div>
         <div className="mx-10">
-          <p className="font-serif text-[17px] sm:text-[20px]">Start now and get <i><span className="text-[#fbb03b] font-bold">10% off</span></i> your subscription!</p>
+          <p className="font-serif text-[17px] sm:text-[20px]">Start now and get <i><span className="text-[#fbb03b] text-[20px] font-bold">10% off</span></i> your subscription!</p>
           <div className="max-w-2xl m-auto mt-5 flex gap-2 flex-wrap justify-center items-center flex-col sm:flex-row sm:gap-5">
             <input type="text" className="text-black m-auto w-[270px] rounded-[10px] h-[40px] sm:rounded-[25px] sm:w-[200px] px-[20px]"
              placeholder="username" name="username" onChange={(e) => setUserInfo(e)} value={user.username}/>
