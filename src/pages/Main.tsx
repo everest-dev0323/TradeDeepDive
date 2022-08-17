@@ -52,7 +52,7 @@ export default function Main() {
       </div>
       <div className="text-center h-full flex flex-col">
         <div className="mx-10 flex flex-col justify-evenly h-full text-center">
-          <h1 className="text-2xl font-medium font-sans sm:text-5xl sm:font-[700]">Learn Market{size.width>=576?<br />:" "}Analysis Now!</h1>
+          <h1 className="text-2xl font-medium font-sans sm:text-6xl sm:font-[700]">Learn Market{size.width>=576?<br />:" "}Analysis Now!</h1>
           <div className="font-sans text-xl sm:text-[20px]">
             <p className="max-w-2xl m-auto leading-6 sm:leading-8">Here at Trader Deep Dive we do out upmost to teach you how to
             understand and analyse markets, then work that into real viable trade ideas for you to action the very same day!</p>
