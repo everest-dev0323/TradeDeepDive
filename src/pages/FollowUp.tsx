@@ -30,7 +30,7 @@ export default function FollowUp() {
               <h1 className="text-5xl font-bold">WELCOME!</h1>
               <p className="text-lg mt-10">WHAT'S NEXT?</p>
             </div>
-            <div className="flex flex-wrap justify-between sm:justify-evenly w-full gap-5">
+            <div className="flex flex-wrap justify-between sm:justify-evenly w-full gap-5 md:-mt-12">
               <div className="w-xs sm:text-center gap-5 sm:gap-0 text-white space-y-[10px] sm:space-y-4 flex sm:block">
                 <h1 className="text-[#026ca7] w-12 font-extrabold text-7xl sm:w-auto">1</h1>
                 <div className="flex justify-between w-full sm:block sm:space-y-4">
@@ -55,8 +55,7 @@ export default function FollowUp() {
               <div className="max-w-xs sm:text-center gap-5 sm:gap-0 text-white self-center space-y-[10px] sm:space-y-4 flex sm:block">
                 <h1 className="text-[#026ca7] font-extrabold text-7xl">3</h1>
                 <p>Ben will schedule a call with you to run through
-                  things. Until then, don't be shy, if you see people
-                  if any of the channels go and say hi!
+                  things. Until then, don't be shy, if you see people in any of the channels go and say hi!
                 </p>
               </div>
             </div>
